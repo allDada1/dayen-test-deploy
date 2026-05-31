@@ -1,0 +1,1221 @@
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) {
+  --dayen-bg: #f6efe5;
+  --dayen-bg-soft: #efe4d6;
+  --dayen-surface: rgba(255, 255, 255, 0.72);
+  --dayen-surface-strong: rgba(255, 255, 255, 0.92);
+  --dayen-border: rgba(78, 58, 42, 0.12);
+  --dayen-border-strong: rgba(78, 58, 42, 0.22);
+  --dayen-text: #2b241d;
+  --dayen-muted: rgba(43, 36, 29, 0.66);
+  --dayen-muted-soft: rgba(43, 36, 29, 0.46);
+  --dayen-accent: #ead8c7;
+  --dayen-accent-2: #d7bfa8;
+  --dayen-accent-ink: #241b15;
+  --dayen-shadow: rgba(72, 51, 34, 0.12);
+  min-height: 100vh;
+  color: var(--dayen-text);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.94), transparent 34%),
+    radial-gradient(circle at 82% 8%, rgba(232, 216, 196, 0.34), transparent 36%),
+    linear-gradient(180deg, #fbf6ee 0%, #f3eadf 100%);
+}
+
+.legacy-shell.admin-shell {
+  --dayen-accent: #e8e1d4;
+  --dayen-accent-2: #bdb6aa;
+  --dayen-accent-ink: #111111;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .topbar {
+  background: rgba(250, 245, 237, 0.88);
+  border-bottom-color: rgba(65, 48, 35, 0.10);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 18px 46px rgba(82, 58, 38, 0.055);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .brand {
+  color: #2b2118;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .topSearch {
+  border-color: rgba(62, 46, 35, 0.16);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 36px rgba(75, 54, 37, 0.055);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .topSearch input {
+  color: #2b241d !important;
+  caret-color: #2b241d;
+  -webkit-text-fill-color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .topSearch input::placeholder {
+  color: rgba(43, 36, 29, 0.46);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .topSearch__clear,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .iconBtn,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .linkBtn,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catBtn,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .smallBtn {
+  border-color: rgba(62, 46, 35, 0.12);
+  background: rgba(255, 255, 255, 0.68);
+  color: #2b241d;
+  box-shadow: 0 14px 34px rgba(75, 54, 37, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .topNav__a,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .headerProfile__trigger {
+  border-color: rgba(62, 46, 35, 0.13);
+  background: rgba(255, 255, 255, 0.68);
+  color: #2b241d;
+  box-shadow: 0 16px 36px rgba(75, 54, 37, 0.075);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .topNav__a.active,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .topNav__a:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .headerProfile__trigger:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .headerProfile__trigger[aria-expanded="true"],
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catBtn:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .iconBtn:hover {
+  color: #241b15;
+  border-color: rgba(72, 51, 34, 0.22);
+  background: linear-gradient(180deg, rgba(246, 232, 216, 0.96), rgba(235, 216, 195, 0.9));
+  box-shadow: 0 18px 38px rgba(75, 54, 37, 0.11);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .badge {
+  border-color: #fbf6ee;
+  background: #2b241d;
+  color: #fbf6ee;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .headerProfile__menu,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchModal__box,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu {
+  border-color: rgba(62, 46, 35, 0.14);
+  background: rgba(255, 251, 245, 0.96);
+  box-shadow: 0 24px 64px rgba(68, 47, 31, 0.16);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchModal__box {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchModal__input {
+  border-color: rgba(43, 36, 29, 0.72);
+  background: rgba(255, 255, 255, 0.70);
+  color: #2b241d !important;
+  caret-color: #2b241d;
+  -webkit-text-fill-color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchModal__input::placeholder {
+  color: rgba(43, 36, 29, 0.44);
+  -webkit-text-fill-color: rgba(43, 36, 29, 0.44);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchModal__label,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchModal__empty {
+  color: rgba(43, 36, 29, 0.72);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchTileResult,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchStoreResult,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResult {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(255, 255, 255, 0.44);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchTileResult:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchStoreResult:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResult:hover {
+  border-color: rgba(78, 58, 42, 0.18);
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchTileResult__icon,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchStoreResult__avatar,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResult__thumb {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(246, 238, 228, 0.82);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchTileResult__body span,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchStoreResult__body span,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResult__meta {
+  color: rgba(43, 36, 29, 0.62);
+}
+
+.legacy-shell.public-light-shell .searchModal__box,
+.legacy-shell.public-light-shell .searchTileResult,
+.legacy-shell.public-light-shell .searchStoreResult,
+.legacy-shell.public-light-shell .searchResult {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell .searchModal__input {
+  color: #2b241d !important;
+  caret-color: #2b241d;
+  -webkit-text-fill-color: #2b241d;
+}
+
+.legacy-shell.public-light-shell .searchModal__label,
+.legacy-shell.public-light-shell .searchModal__empty,
+.legacy-shell.public-light-shell .searchTileResult__body span,
+.legacy-shell.public-light-shell .searchStoreResult__body span,
+.legacy-shell.public-light-shell .searchResult__meta {
+  color: rgba(43, 36, 29, 0.64);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .headerProfile__menu a,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .headerProfile__menu button {
+  color: rgba(43, 36, 29, 0.78);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .headerProfile__menu a:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .headerProfile__menu button:hover {
+  background: rgba(72, 51, 34, 0.07);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu__quick a,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu__tiles a {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(255, 255, 255, 0.58);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu__quick a:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu__tiles a:hover {
+  border-color: rgba(78, 58, 42, 0.18);
+  background: rgba(235, 219, 201, 0.54);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu__quick a small,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu__title,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu__empty {
+  color: rgba(43, 36, 29, 0.58);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catMenu__icon {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(246, 238, 228, 0.82);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .subbar {
+  border-bottom-color: rgba(65, 48, 35, 0.09);
+  background: rgba(248, 241, 231, 0.62);
+  backdrop-filter: blur(14px);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .subLinks a {
+  color: rgba(43, 36, 29, 0.66);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .subLinks a:hover {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .subLinks a:hover::after {
+  background: rgba(87, 65, 48, 0.52);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter {
+  border-top-color: rgba(65, 48, 35, 0.10);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.76), transparent 26%),
+    linear-gradient(180deg, rgba(247, 239, 228, 0.92), rgba(235, 223, 209, 0.96));
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter::before {
+  background:
+    linear-gradient(90deg, transparent, rgba(83, 62, 45, 0.05), transparent),
+    radial-gradient(circle at 86% 10%, rgba(232, 216, 196, 0.32), transparent 24%);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__brand,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__h {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__a,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter .muted,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__bottom {
+  color: rgba(43, 36, 29, 0.62);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__a:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__h:hover {
+  color: #5a3e29;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__social {
+  border-color: rgba(65, 48, 35, 0.12);
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__social::before {
+  display: none;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__social--telegram {
+  border-color: rgba(34, 158, 217, 0.24);
+  background: rgba(34, 158, 217, 0.12);
+  color: #229ed9;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__social--instagram {
+  border-color: rgba(193, 53, 132, 0.24);
+  background: linear-gradient(135deg, rgba(255, 220, 128, 0.22), rgba(193, 53, 132, 0.14), rgba(64, 93, 230, 0.12));
+  color: #c13584;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__social--tiktok {
+  border-color: rgba(24, 24, 24, 0.16);
+  background: linear-gradient(135deg, rgba(0, 242, 234, 0.20), rgba(255, 255, 255, 0.70), rgba(255, 0, 80, 0.15));
+  color: #161616;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__social--youtube {
+  border-color: rgba(255, 0, 51, 0.24);
+  background: rgba(255, 0, 51, 0.11);
+  color: #ff0033;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__social--whatsapp {
+  border-color: rgba(18, 140, 126, 0.24);
+  background: rgba(37, 211, 102, 0.13);
+  color: #128c7e;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__social--chat {
+  border-color: rgba(90, 62, 41, 0.16);
+  background: rgba(234, 216, 199, 0.58);
+  color: #5a3e29;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .siteFooter__bottom {
+  border-top-color: rgba(65, 48, 35, 0.10);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewHero__content,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewSearch,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewSection,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewEmpty {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 24px 62px rgba(70, 50, 34, 0.07);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewHero__content {
+  background:
+    radial-gradient(circle at 86% 12%, rgba(232, 216, 196, 0.42), transparent 32%),
+    radial-gradient(circle at 8% 100%, rgba(255, 255, 255, 0.82), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(242, 232, 220, 0.64));
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewSearch input {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.74);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewSectionCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewTile,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewProduct {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.86), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(241, 231, 218, 0.52));
+  color: #2b241d;
+  box-shadow: 0 18px 48px rgba(70, 50, 34, 0.07);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewSectionCard__icon,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewTile__image {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(245, 237, 226, 0.8);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewSection__count,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .catalogPreviewSelectedNote {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.55);
+  color: rgba(43, 36, 29, 0.64);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .chip {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.58);
+  color: rgba(43, 36, 29, 0.66);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .chip.is-active {
+  border-color: rgba(78, 58, 42, 0.18);
+  background: linear-gradient(180deg, #ead8c7, #dec4ad);
+  color: #241b15;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .card,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResultRow {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 50% 0, rgba(255, 255, 255, 0.84), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(242, 232, 220, 0.58));
+  box-shadow: 0 20px 52px rgba(70, 50, 34, 0.085);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .card:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .card:focus-within,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResultRow:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResultRow:focus-visible {
+  border-color: rgba(78, 58, 42, 0.22);
+  box-shadow: 0 26px 68px rgba(70, 50, 34, 0.13);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .card__img,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResultRow__media,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResultRow__placeholder {
+  background:
+    radial-gradient(circle at top, rgba(232, 216, 196, 0.34), transparent 38%),
+    rgba(246, 238, 228, 0.78);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .card__body {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 239, 229, 0.96));
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .card__tag,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .pillStat {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.82);
+  color: rgba(43, 36, 29, 0.78);
+  box-shadow: 0 10px 26px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .ratingBadge,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .stockBadge,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .searchResultRow__meta span {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(255, 255, 255, 0.58);
+  color: rgba(43, 36, 29, 0.66);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .product-card__actions .linkBtn,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .product-card__buy,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .linkBtn:not(.topNav__a) {
+  border-color: rgba(43, 36, 29, 0.12);
+  background: #2b241d;
+  color: #fffaf3;
+  box-shadow: 0 16px 34px rgba(43, 36, 29, 0.14);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .ghostBtn {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(255, 255, 255, 0.62);
+  color: #2b241d;
+  box-shadow: 0 12px 28px rgba(70, 50, 34, 0.06);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .galleryCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .infoCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .contentCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .cartMain,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .cartCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .payCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .payPane,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .ordersList__card,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .orderDetailsCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profile-form,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .empty-panel {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 92% 0, rgba(255, 255, 255, 0.78), transparent 34%),
+    rgba(255, 255, 255, 0.66);
+  box-shadow: 0 24px 62px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .page-hero {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 92% 0, rgba(255, 255, 255, 0.78), transparent 34%),
+    rgba(255, 255, 255, 0.66);
+  color: #2b241d;
+  box-shadow: 0 24px 62px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .page-hero h1,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .page-hero h2,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .empty-panel strong,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .section-heading h2 {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .section-heading__eyebrow {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(235, 219, 201, 0.62);
+  color: #6b452d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .page-hero p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .section-heading p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .empty-panel p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .order-card__note {
+  color: rgba(43, 36, 29, 0.66);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .shell-button--ghost {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(255, 255, 255, 0.62);
+  color: #2b241d;
+  box-shadow: 0 12px 28px rgba(70, 50, 34, 0.06);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .shell-button--ghost:hover {
+  border-color: rgba(78, 58, 42, 0.22);
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .p__media,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .cartItemCard__media {
+  background:
+    radial-gradient(circle at top, rgba(232, 216, 196, 0.36), transparent 36%),
+    rgba(246, 238, 228, 0.72);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .heroBox__zoom {
+  border-color: rgba(78, 58, 42, 0.14);
+  color: #2b241d;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .thumbs button,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerMiniCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .p__buy,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .spec,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .cartItemCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .cartEmpty,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .paySummary,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .payMethod,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .balanceCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .payStatus,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .orderClaimBox,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .orderClaimCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .orderDetailsRows div,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .orderItemRow,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .orderTimeline__item div,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .ordersPage__item,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .ordersPage__historyItem {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerMiniCard__avatar,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .ordersPage__thumb {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(246, 238, 228, 0.86);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .payMethod.is-active,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .orderSteps span.is-active {
+  border-color: rgba(78, 58, 42, 0.20);
+  background: linear-gradient(180deg, rgba(234, 216, 199, 0.94), rgba(222, 196, 173, 0.78));
+  color: #241b15;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .ordersList__meta span,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .orderSteps span {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(255, 255, 255, 0.52);
+  color: rgba(43, 36, 29, 0.60);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .ordersPage__details {
+  border-top-color: rgba(78, 58, 42, 0.10);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .field-input,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .selectField {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.68);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .field-label {
+  color: rgba(43, 36, 29, 0.58);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .field-input::placeholder {
+  color: rgba(43, 36, 29, 0.42);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .field-input:focus,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .selectField:focus-within,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .selectField.is-open {
+  border-color: rgba(78, 58, 42, 0.24);
+  box-shadow: 0 0 0 3px rgba(78, 58, 42, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .selectField__menu {
+  border-color: rgba(78, 58, 42, 0.16);
+  background: rgba(255, 251, 245, 0.98);
+  box-shadow: 0 20px 48px rgba(70, 50, 34, 0.16);
+  z-index: 120;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .selectField__chevron {
+  color: rgba(43, 36, 29, 0.54);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .selectField__option {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .selectField__option:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .selectField__option.is-selected {
+  background: rgba(78, 58, 42, 0.07);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authStandalone {
+  min-height: 100vh;
+  color: #2b241d;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.96), transparent 32%),
+    radial-gradient(circle at 84% 10%, rgba(232, 216, 196, 0.38), transparent 36%),
+    linear-gradient(180deg, #fbf6ee 0%, #f3eadf 100%);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authTopbar {
+  min-height: 76px;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authTopbar .brand {
+  color: #2b2118;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authTopbar .topNav__a {
+  border-color: rgba(62, 46, 35, 0.13);
+  background: rgba(255, 255, 255, 0.68);
+  color: #2b241d;
+  box-shadow: 0 16px 36px rgba(75, 54, 37, 0.075);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authTopbar .topNav__a:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authTopbar .topNav__a--button {
+  border-color: rgba(72, 51, 34, 0.20);
+  background: linear-gradient(180deg, #ead8c7, #dec4ad);
+  color: #241b15;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authPanel {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 50% -10%, rgba(255, 255, 255, 0.96), transparent 38%),
+    radial-gradient(circle at 100% 0, rgba(232, 216, 196, 0.32), transparent 32%),
+    rgba(255, 255, 255, 0.72);
+  box-shadow: 0 28px 78px rgba(70, 50, 34, 0.12);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authPanel__title {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authPanel__description,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authStrength__meta,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authProviders__label {
+  color: rgba(43, 36, 29, 0.66);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authInlineLink {
+  color: #5a3e29;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authPasswordToggle,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authProviderBtn {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.62);
+  color: #2b241d;
+  box-shadow: 0 12px 28px rgba(70, 50, 34, 0.06);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authProviderBtn:not(:disabled):hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authPasswordToggle:hover {
+  border-color: rgba(78, 58, 42, 0.22);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authProviderBtn:disabled {
+  color: rgba(43, 36, 29, 0.42);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authProviderSoon {
+  background: rgba(78, 58, 42, 0.08);
+  color: rgba(43, 36, 29, 0.64);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authStrength__bar {
+  background: rgba(78, 58, 42, 0.10);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .authStrength__bar span {
+  background: linear-gradient(90deg, #c97668, #5a3e29);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profWrap,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsPage,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileDashboardHero,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsHero,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage .page-hero {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 18% 0, rgba(255, 255, 255, 0.92), transparent 34%),
+    linear-gradient(112deg, rgba(255, 255, 255, 0.82), rgba(231, 215, 195, 0.52));
+  box-shadow: 0 26px 72px rgba(70, 50, 34, 0.11);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileDashboardHero::before {
+  opacity: 0.38;
+  background:
+    radial-gradient(circle at 42% 12%, rgba(120, 88, 58, 0.12), transparent 30%),
+    linear-gradient(135deg, transparent 0 36%, rgba(78, 58, 42, 0.10) 37% 38%, transparent 39% 100%);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileDashboardHero .profName--hero,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profilePanelHead h2,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileActionBanner h2,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsSection__head h2,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage .page-hero h1,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardCard strong {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileDashboardHero .profEyebrow,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsHero .hero-panel__badge,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage .section-heading__eyebrow {
+  color: #7a5234;
+  letter-spacing: 0.10em;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileDashboardHero .profEmail,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileDashboardHero .profNickLine,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profilePanelHead p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileActionBanner p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsSection__head p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsAvatar__body p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardCard p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage .section-heading p {
+  color: rgba(43, 36, 29, 0.66);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileDashboardHero__avatar,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardCard__avatar,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsAvatar__drop {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 30% 15%, rgba(255, 255, 255, 0.92), transparent 34%),
+    rgba(238, 225, 211, 0.72);
+  color: #2b241d;
+  box-shadow: 0 18px 44px rgba(70, 50, 34, 0.12);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileStatsGrid article,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileSidebar,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileInfoPanel,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileActionBanner,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsSection,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsPage__quick,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage .stat-card,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage .notice-banner,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerUploadBox__drop {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.78), transparent 34%),
+    rgba(255, 255, 255, 0.68);
+  box-shadow: 0 22px 58px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileStatsGrid article {
+  min-height: 92px;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileStatIcon,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileInfoRow__icon,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileActionBanner__icon {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(235, 219, 201, 0.70);
+  color: #5a3e29;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .statCard__label,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sectionSub,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .hubTile__sub,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileInfoRow__label,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsReadonly {
+  color: rgba(43, 36, 29, 0.58);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileInfoRows,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsHints {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileInfoRow {
+  border-bottom-color: rgba(78, 58, 42, 0.09);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileInfoRow strong,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsAvatar__body strong,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerUploadBox__drop strong {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileInfoRow strong.is-success {
+  color: #247247;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileInfoRow strong.is-warning {
+  color: #9b5b2c;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileSideLink,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__trigger,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__dropdown a,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__dropdown button {
+  color: rgba(43, 36, 29, 0.74);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileSideLink span,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__trigger span {
+  color: #7a5234;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileSideLink:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileSideLink.is-active,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__trigger:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__trigger[aria-expanded="true"],
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__dropdown a:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__dropdown button:hover {
+  border-color: rgba(78, 58, 42, 0.14);
+  background: rgba(235, 219, 201, 0.48);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileSideLink--danger,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileSideLink--danger span {
+  color: #a24736;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileMenu__dropdown {
+  border-color: rgba(78, 58, 42, 0.14);
+  background: rgba(255, 251, 245, 0.98);
+  box-shadow: 0 20px 52px rgba(70, 50, 34, 0.16);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileEditButton,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profilePanelAction,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .profileActionBanner__button,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsPage .shell-button,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage .shell-button {
+  border-color: rgba(43, 36, 29, 0.12);
+  background: #2b241d;
+  color: #fffaf3;
+  box-shadow: 0 16px 34px rgba(43, 36, 29, 0.14);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsPage .shell-button--ghost,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerDashboardPage .shell-button--ghost,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerUploadBox__actions .shell-button {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(255, 255, 255, 0.62);
+  color: #2b241d;
+  box-shadow: 0 12px 28px rgba(70, 50, 34, 0.06);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .settingsAvatar__drop:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerUploadBox__drop:hover {
+  border-color: rgba(78, 58, 42, 0.24);
+  background: rgba(255, 255, 255, 0.82);
+  transform: translateY(-1px);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerUploadBox__drop span,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerUploadBox__drop small,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .sellerUploadBox__drop em {
+  color: rgba(43, 36, 29, 0.60);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .aboutPage {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docHero,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docMiniCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docLinkCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFaqItem,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .chatShell {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 96% 0, rgba(255, 255, 255, 0.78), transparent 34%),
+    rgba(255, 255, 255, 0.68);
+  box-shadow: 0 22px 58px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docHero {
+  background:
+    radial-gradient(circle at 18% 0, rgba(255, 255, 255, 0.92), transparent 34%),
+    linear-gradient(112deg, rgba(255, 255, 255, 0.82), rgba(231, 215, 195, 0.52));
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docHero__eyebrow,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docBadge,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .chatTag {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(235, 219, 201, 0.62);
+  color: #6b452d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docHero h1,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docSectionTitle,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docMiniCard h3,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docLinkCard h3,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFaqItem summary,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docMiniValue {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docLead,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docMiniNote,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docMiniCard p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docLinkCard p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docCard p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docCard li,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFaqBody,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docMiniLabel {
+  color: rgba(43, 36, 29, 0.66);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docBtn,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docSubmitBtn {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(255, 255, 255, 0.62);
+  color: #2b241d;
+  box-shadow: 0 12px 28px rgba(70, 50, 34, 0.06);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docBtn--primary,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docSubmitBtn {
+  border-color: rgba(43, 36, 29, 0.12);
+  background: #2b241d;
+  color: #fffaf3;
+  box-shadow: 0 16px 34px rgba(43, 36, 29, 0.14);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docInput,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docTextarea,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docSelect {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.68);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docInput::placeholder,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docTextarea::placeholder {
+  color: rgba(43, 36, 29, 0.42);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFileField,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .chatBox,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantProductCard {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(235, 219, 201, 0.36), transparent 32%),
+    rgba(255, 255, 255, 0.52);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFileField:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantProductCard:hover {
+  border-color: rgba(78, 58, 42, 0.22);
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFileField__title,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFilePill,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .msg,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantProductCard b {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFileField__button,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFilePill,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .msg {
+  border-color: rgba(78, 58, 42, 0.11);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFileField small,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .msg__meta,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantProductCard small {
+  color: rgba(43, 36, 29, 0.56);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docFilePill button {
+  background: rgba(78, 58, 42, 0.08);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .msg--me {
+  border-color: rgba(78, 58, 42, 0.16);
+  background: rgba(235, 219, 201, 0.60);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docSuccess {
+  border-color: rgba(36, 114, 71, 0.18);
+  background: rgba(36, 114, 71, 0.10);
+  color: #247247;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .docSuccess.is-error {
+  border-color: rgba(162, 71, 54, 0.20);
+  background: rgba(162, 71, 54, 0.10);
+  color: #a24736;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsPage {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsHero,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsToolbar,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationCard {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 96% 0, rgba(255, 255, 255, 0.78), transparent 34%),
+    rgba(255, 255, 255, 0.68);
+  box-shadow: 0 22px 58px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsHero {
+  background:
+    radial-gradient(circle at 86% 16%, rgba(235, 219, 201, 0.42), transparent 32%),
+    radial-gradient(circle at 12% 100%, rgba(255, 255, 255, 0.84), transparent 38%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(231, 215, 195, 0.46));
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsHero__eyebrow {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(235, 219, 201, 0.62);
+  color: #6b452d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsHero h1,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsToolbar__title,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationCard__title,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsStats__value {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsHero p,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsStats__label,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationCard__body,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationCard__meta,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationStatus {
+  color: rgba(43, 36, 29, 0.62);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsStats__card,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsFilters,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationCard__icon {
+  border-color: rgba(78, 58, 42, 0.11);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsFilters button {
+  color: rgba(43, 36, 29, 0.62);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsFilters button span {
+  background: rgba(78, 58, 42, 0.07);
+  color: rgba(43, 36, 29, 0.58);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsFilters button:hover,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsFilters button.is-active {
+  border-color: rgba(78, 58, 42, 0.14);
+  background: rgba(235, 219, 201, 0.50);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationsFilters button.is-active span,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationStatus.is-new {
+  border-color: rgba(43, 36, 29, 0.12);
+  background: #2b241d;
+  color: #fffaf3;
+  box-shadow: 0 12px 28px rgba(43, 36, 29, 0.12);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationCard:hover {
+  border-color: rgba(78, 58, 42, 0.20);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 26px 72px rgba(70, 50, 34, 0.12);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationCard.is-unread {
+  border-color: rgba(78, 58, 42, 0.22);
+  background:
+    radial-gradient(circle at top left, rgba(235, 219, 201, 0.52), transparent 34%),
+    rgba(255, 255, 255, 0.74);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .notificationCard__icon {
+  color: #5a3e29;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantWidget__panel {
+  border-color: rgba(78, 58, 42, 0.14);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.90), transparent 34%),
+    radial-gradient(circle at 82% 18%, rgba(235, 219, 201, 0.32), transparent 32%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.98), rgba(248, 241, 232, 0.98) 54%, rgba(241, 231, 219, 0.98));
+  box-shadow:
+    0 34px 90px rgba(70, 50, 34, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantWidget__top {
+  border-bottom-color: rgba(78, 58, 42, 0.10);
+  background:
+    linear-gradient(90deg, rgba(235, 219, 201, 0.28), transparent 55%),
+    rgba(255, 255, 255, 0.40);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantWidget__top strong,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .docSectionTitle,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantAction__body strong {
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantWidget__top span,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantAction__body small {
+  color: rgba(43, 36, 29, 0.58);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantWidget__top button,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantQuick button,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .chatTag {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.62);
+  color: #2b241d;
+  box-shadow: 0 12px 28px rgba(70, 50, 34, 0.06);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantQuick button:hover:not(:disabled) {
+  border-color: rgba(78, 58, 42, 0.20);
+  background: rgba(235, 219, 201, 0.52);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .chatBox {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 16% 0%, rgba(235, 219, 201, 0.22), transparent 34%),
+    rgba(255, 255, 255, 0.42);
+  scrollbar-color: rgba(78, 58, 42, 0.30) rgba(78, 58, 42, 0.06);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .chatBox::-webkit-scrollbar-track,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat .chatBox::-webkit-scrollbar-track {
+  background: rgba(78, 58, 42, 0.06);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .chatBox::-webkit-scrollbar-thumb,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat .chatBox::-webkit-scrollbar-thumb {
+  border-color: rgba(255, 251, 245, 0.88);
+  background: linear-gradient(180deg, rgba(78, 58, 42, 0.34), rgba(78, 58, 42, 0.16));
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .msg {
+  border-color: rgba(78, 58, 42, 0.10);
+  background: rgba(255, 255, 255, 0.66);
+  color: #2b241d;
+  box-shadow: 0 12px 28px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .msg--me {
+  border-color: rgba(78, 58, 42, 0.16);
+  background: rgba(235, 219, 201, 0.64);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .docInput {
+  border-color: rgba(78, 58, 42, 0.12);
+  background: rgba(255, 255, 255, 0.68);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantChat--compact .docSubmitBtn {
+  border-color: rgba(43, 36, 29, 0.12);
+  background: #2b241d;
+  color: #fffaf3;
+  box-shadow: 0 16px 34px rgba(43, 36, 29, 0.14);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantAction {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.40)),
+    rgba(255, 255, 255, 0.50);
+  color: #2b241d;
+  box-shadow: 0 12px 30px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantAction:hover {
+  border-color: rgba(78, 58, 42, 0.20);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantAction__icon,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantAction--report .assistantAction__icon,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantAction--support .assistantAction__icon,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .assistantAction--verify_email .assistantAction__icon {
+  border-color: rgba(78, 58, 42, 0.14);
+  background: rgba(235, 219, 201, 0.62);
+  color: #5a3e29;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admToolbar,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admPagination,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admPanelCard,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admTableWrap {
+  border-color: rgba(78, 58, 42, 0.12);
+  background:
+    radial-gradient(circle at 96% 0, rgba(255, 255, 255, 0.78), transparent 34%),
+    rgba(255, 255, 255, 0.68);
+  color: #2b241d;
+  box-shadow: 0 22px 58px rgba(70, 50, 34, 0.08);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admPagination,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admPageInfo,
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admToolbar .field-label {
+  color: rgba(43, 36, 29, 0.64);
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admPageBtn {
+  border-color: rgba(78, 58, 42, 0.13);
+  background: rgba(255, 255, 255, 0.62);
+  color: #2b241d;
+}
+
+.legacy-shell.public-light-shell:not(.furniture-shell):not(.beauty-shell):not(.shoes-shell) .admPageBtn:not(:disabled):hover {
+  border-color: rgba(78, 58, 42, 0.20);
+  background: rgba(235, 219, 201, 0.52);
+}

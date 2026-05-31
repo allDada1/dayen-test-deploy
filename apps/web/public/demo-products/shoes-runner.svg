@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#eef7f8"/><stop offset="1" stop-color="#d7c7b6"/></linearGradient>
+    <linearGradient id="shoe" x1="0" x2="1"><stop stop-color="#ffffff"/><stop offset=".55" stop-color="#e6ecef"/><stop offset="1" stop-color="#9fb1bc"/></linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="980" cy="165" r="155" fill="#73c6d4" opacity=".25"/>
+  <circle cx="185" cy="705" r="140" fill="#ff7b54" opacity=".16"/>
+  <path d="M190 570c130 20 230-35 330-145 42-47 103-51 156-17l168 108c67 43 140 63 222 68 32 2 53 35 37 63-32 57-97 89-184 89H314c-91 0-151-60-124-166Z" fill="url(#shoe)"/>
+  <path d="M219 645h858c-25 58-84 91-169 91H315c-63 0-106-29-125-76 7-10 16-15 29-15Z" fill="#242b2f"/>
+  <path d="M315 568c112 22 202-19 286-122" fill="none" stroke="#ff5a3d" stroke-width="26" stroke-linecap="round"/>
+  <path d="M610 438 540 545m160-52-76 99m158-45-82 88" stroke="#50616b" stroke-width="16" stroke-linecap="round"/>
+  <path d="M344 688h532" stroke="#f7f7f7" stroke-width="22" stroke-linecap="round" opacity=".9"/>
+  <text x="90" y="130" fill="#182126" font-family="Arial, sans-serif" font-size="48" font-weight="800">AERO RUNNER</text>
+  <text x="90" y="188" fill="#58656c" font-family="Arial, sans-serif" font-size="28">легкие кроссовки</text>
+</svg>

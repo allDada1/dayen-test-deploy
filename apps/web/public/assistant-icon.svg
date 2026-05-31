@@ -1,0 +1,39 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.95 0 1 0 0 0.75 0 0 1 0 0.28 0 0 0 0.65 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="ink" x1="42" y1="88" x2="174" y2="186" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B504B"/>
+      <stop offset="1" stop-color="#202620"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="128" y1="49" x2="217" y2="178" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2D989"/>
+      <stop offset="1" stop-color="#C8A64D"/>
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M130 58H190C209.882 58 226 74.1177 226 94V141C226 155.477 217.457 167.957 205.143 173.66V197L174.414 177H132"
+    stroke="url(#gold)"
+    stroke-width="15"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#softGlow)"
+  />
+
+  <path
+    d="M49 86H148C169.539 86 187 103.461 187 125V151C187 172.539 169.539 190 148 190H102L57 219V187.102C38.818 183.286 25 167.132 25 147.842V125C25 103.461 42.4609 86 64 86H49Z"
+    fill="rgba(234,241,227,.10)"
+    stroke="url(#ink)"
+    stroke-width="18"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <circle cx="82" cy="139" r="12" fill="url(#gold)"/>
+  <circle cx="117" cy="139" r="12" fill="url(#gold)"/>
+  <circle cx="152" cy="139" r="12" fill="url(#gold)"/>
+</svg>

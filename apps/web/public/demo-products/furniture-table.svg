@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f8f0e6"/><stop offset="1" stop-color="#e4d1bd"/></linearGradient>
+    <linearGradient id="wood" x1="0" x2="1"><stop stop-color="#b77c4d"/><stop offset="1" stop-color="#6e432b"/></linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="0" y="615" width="1200" height="285" fill="#ccb39b"/>
+  <path d="M140 620c170-110 772-120 920 0" fill="none" stroke="#fff6ea" stroke-width="34" opacity=".45"/>
+  <ellipse cx="600" cy="460" rx="410" ry="72" fill="#5b3b29" opacity=".18"/>
+  <path d="M250 380c38-52 663-55 704 0l-58 140H308l-58-140Z" fill="url(#wood)"/>
+  <path d="M288 398h624" stroke="#d9a36f" stroke-width="14" opacity=".5"/>
+  <path d="M365 515h84l-45 245h-82l43-245Zm386 0h84l43 245h-82l-45-245Z" fill="#5b3624"/>
+  <circle cx="290" cy="285" r="42" fill="#f5efe7"/>
+  <rect x="695" y="250" width="140" height="190" rx="28" fill="#2f5f58"/>
+  <rect x="720" y="280" width="90" height="112" rx="18" fill="#7ea197"/>
+  <text x="90" y="130" fill="#2b241d" font-family="Arial, sans-serif" font-size="48" font-weight="800">NORD OAK</text>
+  <text x="90" y="188" fill="#725842" font-family="Arial, sans-serif" font-size="28">обеденный стол</text>
+</svg>

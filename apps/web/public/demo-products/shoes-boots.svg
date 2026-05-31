@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f7efe7"/><stop offset="1" stop-color="#d2b89d"/></linearGradient>
+    <linearGradient id="leather" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#8a5233"/><stop offset="1" stop-color="#2b1c15"/></linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="0" y="665" width="1200" height="235" fill="#c6aa8d"/>
+  <ellipse cx="610" cy="710" rx="430" ry="64" fill="#3b2b22" opacity=".18"/>
+  <path d="M420 205h270c31 0 56 25 56 56v332l202 54c51 14 81 67 64 117H347c-66 0-115-61-101-126l80-380c10-31 43-53 94-53Z" fill="url(#leather)"/>
+  <path d="M410 245h250v360H333l72-328c4-18 19-32 36-32Z" fill="#9b613d"/>
+  <path d="M342 650h640c39 14 53 58 32 92H278c-10-44 18-82 64-92Z" fill="#201610"/>
+  <path d="M492 282v318m74-318v318m74-318v318" stroke="#3f271b" stroke-width="12" opacity=".55"/>
+  <path d="M446 370h238m-260 72h260m-276 72h276" stroke="#d7a36d" stroke-width="12" stroke-linecap="round"/>
+  <text x="90" y="130" fill="#2b241d" font-family="Arial, sans-serif" font-size="48" font-weight="800">WESTWOOD BOOT</text>
+  <text x="90" y="188" fill="#704f37" font-family="Arial, sans-serif" font-size="28">кожаные ботинки</text>
+</svg>

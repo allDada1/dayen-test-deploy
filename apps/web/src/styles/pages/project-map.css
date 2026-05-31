@@ -1,0 +1,200 @@
+.projectMapPage {
+  min-height: 72vh;
+  padding: 42px 0 72px;
+  background:
+    radial-gradient(circle at 78% 0%, rgba(218, 185, 144, .18), transparent 34%),
+    linear-gradient(180deg, #fbf7ef 0%, #f6efe4 100%);
+}
+
+.projectMapPage__inner {
+  display: grid;
+  gap: 22px;
+}
+
+.projectMapHero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid rgba(55, 45, 34, .12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .74);
+  box-shadow: 0 24px 70px rgba(43, 32, 21, .08);
+}
+
+.projectMapHero__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #8e7050;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.projectMapHero h1 {
+  margin: 0;
+  color: #2f281f;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.02;
+}
+
+.projectMapHero p {
+  max-width: 680px;
+  margin: 12px 0 0;
+  color: rgba(47, 40, 31, .68);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.projectMapHero__stat {
+  display: grid;
+  place-items: center;
+  width: 118px;
+  height: 118px;
+  flex: 0 0 118px;
+  border: 1px solid rgba(55, 45, 34, .12);
+  border-radius: 24px;
+  background: #2f281f;
+  color: #fff;
+}
+
+.projectMapHero__stat strong {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.projectMapHero__stat span {
+  color: rgba(255, 255, 255, .68);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.projectMapGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.projectMapCard {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid rgba(55, 45, 34, .12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0 18px 48px rgba(43, 32, 21, .06);
+}
+
+.projectMapCard__head h2 {
+  margin: 0;
+  color: #2f281f;
+  font-size: 22px;
+}
+
+.projectMapCard__head p {
+  margin: 7px 0 0;
+  color: rgba(47, 40, 31, .62);
+  line-height: 1.45;
+}
+
+.projectMapLinks {
+  display: grid;
+  gap: 10px;
+}
+
+.projectMapLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 72px;
+  padding: 14px 16px;
+  border: 1px solid rgba(55, 45, 34, .10);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .66);
+  color: #2f281f;
+  text-decoration: none;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease, box-shadow .16s ease;
+}
+
+.projectMapLink:hover {
+  transform: translateY(-1px);
+  border-color: rgba(142, 112, 80, .38);
+  background: #fff;
+  box-shadow: 0 16px 34px rgba(43, 32, 21, .08);
+}
+
+.projectMapLink span {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.projectMapLink strong {
+  font-size: 15px;
+}
+
+.projectMapLink small {
+  color: rgba(47, 40, 31, .58);
+  line-height: 1.35;
+}
+
+.projectMapLink b {
+  max-width: 180px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(47, 40, 31, .07);
+  color: rgba(47, 40, 31, .62);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 900px) {
+  .projectMapHero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .projectMapGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .projectMapPage {
+    padding: 24px 0 52px;
+  }
+
+  .projectMapHero,
+  .projectMapCard {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .projectMapHero__stat {
+    width: 100%;
+    height: auto;
+    min-height: 76px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .projectMapHero__stat strong {
+    font-size: 30px;
+  }
+
+  .projectMapLink {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .projectMapLink b {
+    max-width: 100%;
+  }
+}

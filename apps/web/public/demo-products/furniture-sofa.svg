@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fbf4ea"/><stop offset="1" stop-color="#dac2a7"/></linearGradient>
+    <linearGradient id="sofa" x1="0" x2="1"><stop stop-color="#6f8f86"/><stop offset="1" stop-color="#2f5f58"/></linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="170" cy="150" r="105" fill="#fff7ed" opacity=".75"/>
+  <circle cx="1050" cy="180" r="140" fill="#c99f74" opacity=".18"/>
+  <rect x="170" y="475" width="860" height="230" rx="44" fill="#d8bd9e"/>
+  <rect x="230" y="360" width="740" height="230" rx="70" fill="url(#sofa)"/>
+  <rect x="180" y="455" width="840" height="190" rx="48" fill="#49766d"/>
+  <rect x="245" y="405" width="260" height="160" rx="34" fill="#83a399"/>
+  <rect x="535" y="405" width="260" height="160" rx="34" fill="#7b9d93"/>
+  <rect x="825" y="405" width="120" height="160" rx="34" fill="#6f9288"/>
+  <rect x="245" y="585" width="690" height="38" rx="19" fill="#2b5a53" opacity=".55"/>
+  <rect x="255" y="660" width="70" height="90" rx="24" fill="#4f3529"/>
+  <rect x="875" y="660" width="70" height="90" rx="24" fill="#4f3529"/>
+  <path d="M720 300c40-70 112-83 166-44 60 44 62 132-6 184-58 44-127 36-166-12-31-39-24-88 6-128Z" fill="#fff7ed" opacity=".78"/>
+  <text x="90" y="130" fill="#2b241d" font-family="Arial, sans-serif" font-size="48" font-weight="800">DAYEN HOME</text>
+  <text x="90" y="188" fill="#6d5744" font-family="Arial, sans-serif" font-size="28">модульный диван</text>
+</svg>

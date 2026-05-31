@@ -1,0 +1,11 @@
+export { AdminClaimsPage } from "./AdminClaimsPage";
+export { AdminAuditLogsPage } from "./AdminAuditLogsPage";
+export { AdminDashboardPage } from "./AdminDashboardPage";
+export { AdminHomeBannerPage } from "./AdminHomeBannerPage";
+export { AdminOrdersPage } from "./AdminOrdersPage";
+export { AdminProductsPage } from "./AdminProductsPage";
+export { AdminSectionsPage } from "./AdminSectionsPage";
+export { AdminSellerRequestsPage } from "./AdminSellerRequestsPage";
+export { AdminSupportTicketsPage } from "./AdminSupportTicketsPage";
+export { AdminTilesPage } from "./AdminTilesPage";
+export { AdminUsersPage } from "./AdminUsersPage";

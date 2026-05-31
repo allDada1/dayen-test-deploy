@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap");
+
+:root {
+  --dayen-bg: #060504;
+  --dayen-bg-soft: #100f0d;
+  --dayen-surface: rgba(246, 238, 222, 0.048);
+  --dayen-surface-strong: rgba(246, 238, 222, 0.082);
+  --dayen-border: rgba(246, 238, 222, 0.11);
+  --dayen-border-strong: rgba(246, 238, 222, 0.20);
+  --dayen-text: #f7efe0;
+  --dayen-muted: rgba(247, 239, 224, 0.66);
+  --dayen-muted-soft: rgba(247, 239, 224, 0.46);
+  --dayen-accent: #f0e7d4;
+  --dayen-accent-2: #d8cbb5;
+  --dayen-accent-ink: #151311;
+  --dayen-danger: #d77b7b;
+  --dayen-success: #b7c28d;
+  --dayen-shadow: rgba(0, 0, 0, 0.42);
+  color: var(--dayen-text);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(246, 238, 222, 0.10), transparent 32%),
+    radial-gradient(circle at 85% 12%, rgba(216, 203, 181, 0.055), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(247, 239, 224, 0.038), transparent 36%),
+    var(--dayen-bg);
+  font-family: "Manrope", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+textarea { resize: vertical; }
+#root { min-height: 100vh; }
+
+::selection {
+  background: rgba(240, 231, 212, 0.26);
+  color: var(--dayen-text);
+}

@@ -1,0 +1,823 @@
+.legacy-shell.admin-shell {
+  --dayen-bg: #030509;
+  --dayen-bg-soft: #070b12;
+  --dayen-surface: rgba(9, 13, 22, 0.92);
+  --dayen-surface-strong: rgba(13, 19, 32, 0.96);
+  --dayen-border: rgba(128, 158, 210, 0.14);
+  --dayen-border-strong: rgba(89, 142, 230, 0.34);
+  --dayen-text: #f5f8ff;
+  --dayen-muted: rgba(226, 234, 248, 0.68);
+  --dayen-muted-soft: rgba(226, 234, 248, 0.46);
+  --dayen-accent: #3b82f6;
+  --dayen-accent-2: #60a5fa;
+  --dayen-accent-ink: #f8fbff;
+  --dayen-shadow: rgba(0, 0, 0, 0.58);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 16% 0%, rgba(37, 99, 235, 0.16), transparent 30%),
+    radial-gradient(circle at 84% 8%, rgba(14, 165, 233, 0.10), transparent 32%),
+    linear-gradient(180deg, #030509 0%, #05070c 48%, #020305 100%);
+  color: var(--dayen-text);
+}
+
+.legacy-shell.admin-shell .topbar,
+.legacy-shell.admin-shell .subbar {
+  border-color: rgba(128, 158, 210, 0.12);
+  background: rgba(3, 5, 9, 0.88);
+  backdrop-filter: blur(18px);
+}
+
+.legacy-shell.admin-shell .brand,
+.legacy-shell.admin-shell .brand__name,
+.legacy-shell.admin-shell .subLinks a,
+.legacy-shell.admin-shell .topSearch input {
+  color: var(--dayen-text);
+}
+
+.legacy-shell.admin-shell .topSearch,
+.legacy-shell.admin-shell .iconBtn,
+.legacy-shell.admin-shell .catBtn,
+.legacy-shell.admin-shell .topNav__a,
+.legacy-shell.admin-shell .headerProfile__trigger {
+  border-color: rgba(128, 158, 210, 0.16);
+  background: rgba(12, 18, 30, 0.82);
+  color: var(--dayen-text);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+}
+
+.legacy-shell.admin-shell .topNav__a.active,
+.legacy-shell.admin-shell .topNav__a:hover {
+  border-color: rgba(96, 165, 250, 0.38);
+  background: linear-gradient(180deg, #2563eb, #1d4ed8);
+  color: #f8fbff;
+}
+
+.legacy-shell.admin-shell .linkBtn,
+.legacy-shell.admin-shell .smallBtn,
+.legacy-shell.admin-shell .admPageBtn:not(:disabled) {
+  border-color: rgba(96, 165, 250, 0.38);
+  background: linear-gradient(180deg, #2563eb, #1d4ed8);
+  color: #f8fbff;
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.22);
+}
+
+.legacy-shell.admin-shell .ghostBtn {
+  border-color: rgba(96, 165, 250, 0.26);
+  background: rgba(15, 23, 42, 0.86);
+  color: #dbeafe;
+}
+
+.legacy-shell.admin-shell .linkBtn:hover,
+.legacy-shell.admin-shell .smallBtn:hover,
+.legacy-shell.admin-shell .ghostBtn:hover,
+.legacy-shell.admin-shell .admPageBtn:not(:disabled):hover {
+  border-color: rgba(147, 197, 253, 0.55);
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+  color: #fff;
+}
+
+.legacy-shell.admin-shell .admPanelCard,
+.legacy-shell.admin-shell .contentCard,
+.legacy-shell.admin-shell .profile-form,
+.legacy-shell.admin-shell .empty-panel {
+  border-color: rgba(128, 158, 210, 0.14);
+  background:
+    radial-gradient(circle at 88% 0%, rgba(59, 130, 246, 0.09), transparent 34%),
+    rgba(9, 13, 22, 0.92);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+.admWrap {
+  padding: 22px 0 28px;
+  position: relative;
+  display: grid;
+  gap: 14px;
+  --adm-sidebar-width: 250px;
+}
+
+.admPanelHead {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.admPanelHead__title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 950;
+  line-height: 1.04;
+}
+
+.admPanelHead__subtitle {
+  margin-top: 8px;
+  color: rgba(255,255,255,.72);
+}
+
+.admTitle { margin: 0; font-size: 20px; font-weight: 950; }
+.admSub { color: rgba(255,255,255,.72); margin-top: 6px; }
+
+.admNav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.admNav__group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admNav__groupTitle {
+  color: rgba(255,255,255,.46);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.admNav__groupLinks {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admNav a {
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.18);
+}
+
+.admNav a.is-active {
+  background: linear-gradient(180deg, rgba(59, 130, 246, .36), rgba(29, 78, 216, .22));
+  border-color: rgba(96, 165, 250, .42);
+  color: #f8fbff;
+}
+
+@media (min-width: 1180px) {
+  .admWrap {
+    grid-template-columns: var(--adm-sidebar-width) minmax(0, 1fr);
+    column-gap: 24px;
+    row-gap: 18px;
+    align-items: start;
+  }
+
+  .admPanelHead {
+    display: contents;
+    margin-bottom: 0;
+  }
+
+  .admPanelHead > div {
+    grid-column: 2;
+    padding: 18px 0 8px;
+  }
+
+  .admNav {
+    grid-column: 1;
+    grid-row: 1 / span 50;
+    position: sticky;
+    top: 112px;
+    display: grid;
+    gap: 16px;
+    align-self: start;
+    width: 100%;
+    padding: 14px;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,.10);
+    background:
+      radial-gradient(circle at 20% 0%, rgba(59, 130, 246, .14), transparent 36%),
+      rgba(6, 10, 18, .86);
+  }
+
+  .admNav__group,
+  .admNav__groupLinks {
+    display: grid;
+    gap: 8px;
+  }
+
+  .admNav__group {
+    align-items: stretch;
+  }
+
+  .admNav__groupTitle {
+    padding-left: 4px;
+  }
+
+  .admNav a {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    border-radius: 18px;
+    text-align: left;
+  }
+
+  .admWrap > :not(.admPanelHead) {
+    grid-column: 2;
+    min-width: 0;
+  }
+}
+
+.admDashboardHero {
+  padding: 18px 0 8px;
+}
+
+.admDashboardGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
+  gap: 18px;
+}
+
+.admDashboardIntro,
+.admDashboardHealth,
+.admOperationCard {
+  padding: 22px;
+}
+
+.admDashboardIntro {
+  display: grid;
+  gap: 14px;
+}
+
+.admFocusGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.admFocusCard {
+  display: grid;
+  gap: 10px;
+  min-height: 124px;
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  color: #fff;
+  text-decoration: none;
+}
+
+.admFocusCard span {
+  color: rgba(255,255,255,.66);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admFocusCard small {
+  color: rgba(255,255,255,.46);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admFocusCard strong {
+  align-self: end;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.admFocusCard.is-active {
+  border-color: rgba(80,200,160,.24);
+  background: rgba(60,170,130,.10);
+}
+
+.admFocusCard.is-warning {
+  border-color: rgba(255,190,90,.28);
+  background: rgba(255,170,70,.10);
+}
+
+.admFocusCard.is-danger {
+  border-color: rgba(255,100,120,.32);
+  background: rgba(255,80,100,.12);
+}
+
+.admMetricList {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.admMetricList div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.admMetricList div:last-child {
+  border-bottom: 0;
+}
+
+.admMetricList span {
+  color: rgba(255,255,255,.62);
+  font-weight: 700;
+}
+
+.admMetricList strong {
+  color: #fff;
+  text-align: right;
+}
+
+.admOperationsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admOperationCard {
+  display: grid;
+  gap: 12px;
+}
+
+.admOperationLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.admSummaryRows {
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.admSummaryRows div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 38px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.admSummaryRows div:last-child {
+  border-bottom: 0;
+}
+
+.admSummaryRows span {
+  color: rgba(255,255,255,.62);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admSummaryRows strong {
+  color: #fff;
+  text-align: right;
+}
+
+.admPagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.admPageBtn {
+  min-width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  color: #f4eee3;
+  cursor: pointer;
+}
+
+.admPageBtn:disabled {
+  opacity: .45;
+  cursor: default;
+}
+
+.admPageInfo {
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admToolbar {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admList {
+  display: grid;
+  gap: 12px;
+}
+
+.admRow {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.18);
+}
+
+.admUsersLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr);
+  gap: 24px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.admUserCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.admUserCard.is-active {
+  border-color: rgba(255,255,255,.20);
+  background: rgba(255,255,255,.065);
+}
+
+.admUserCard__open {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.admUserCard__main {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.admUserPanel {
+  position: sticky;
+  top: 150px;
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.admUsersLayout .stack-list {
+  gap: 16px;
+}
+
+.admAuditMeta {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+  color: rgba(226, 234, 248, .72);
+}
+
+.admAuditMeta summary {
+  width: fit-content;
+  cursor: pointer;
+  color: #dbeafe;
+  font-weight: 800;
+}
+
+.admAuditMeta pre {
+  max-height: 240px;
+  margin: 0;
+  overflow: auto;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(96, 165, 250, .18);
+  background: rgba(3, 7, 18, .72);
+  color: rgba(226, 234, 248, .82);
+  font-size: 12px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.admClaimsLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.admClaimCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.admClaimCard.is-active {
+  border-color: rgba(240, 231, 212, 0.30);
+  background: rgba(240, 231, 212, 0.07);
+}
+
+.admClaimCard__open {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.admClaimCard__main {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.admClaimPanel {
+  position: sticky;
+  top: 150px;
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.admClaimPanel .empty-panel {
+  min-height: 156px;
+}
+
+.admClaimsLayout .stack-list {
+  gap: 16px;
+}
+
+.admSupportMessage strong {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.admSupportAttachment {
+  display: grid;
+  gap: 10px;
+}
+
+.admAttachmentBook {
+  display: grid;
+  gap: 12px;
+}
+
+.admAttachmentBook__stage {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.10);
+  background:
+    radial-gradient(circle at 25% 20%, rgba(255,255,255,.075), transparent 30%),
+    rgba(0,0,0,.20);
+}
+
+.admAttachmentBook__stage img {
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+}
+
+.admAttachmentBook__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.admAttachmentBook__controls span {
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.admAttachmentOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.08), transparent 34%),
+    rgba(5,5,5,.94);
+  backdrop-filter: blur(16px);
+}
+
+.admAttachmentOverlay__top {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(12,15,22,.78);
+  box-shadow: 0 18px 60px rgba(0,0,0,.35);
+}
+
+.admAttachmentOverlay__top strong {
+  color: #fff;
+  font-weight: 950;
+}
+
+.admAttachmentOverlay__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.admAttachmentOverlay__actions span {
+  min-width: 54px;
+  color: rgba(255,255,255,.74);
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.admAttachmentOverlay__stage {
+  position: absolute;
+  inset: 86px 104px 28px;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  padding: 28px;
+}
+
+.admAttachmentOverlay__stage img {
+  max-width: min(92vw, 1700px);
+  max-height: calc(100vh - 150px);
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 28px 90px rgba(0,0,0,.42);
+  transform-origin: center;
+  transition: transform .16s ease;
+}
+
+.admAttachmentOverlay__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 58px;
+  height: 72px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(20,24,33,.72);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.admAttachmentOverlay__nav:hover:not(:disabled) {
+  border-color: rgba(255,255,255,.24);
+  background: rgba(255,255,255,.10);
+}
+
+.admAttachmentOverlay__nav:disabled {
+  opacity: .32;
+  cursor: default;
+}
+
+.admAttachmentOverlay__nav--prev {
+  left: 24px;
+}
+
+.admAttachmentOverlay__nav--next {
+  right: 24px;
+}
+
+.admSupportStats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0 4px;
+}
+
+.admSupportStat {
+  display: grid;
+  gap: 8px;
+  min-height: 96px;
+  padding: 14px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.admSupportStat span {
+  color: rgba(255,255,255,.66);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admSupportStat strong {
+  align-self: end;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.admSupportStat:hover,
+.admSupportStat.is-selected {
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.075);
+}
+
+.admSupportStat.is-danger.is-selected,
+.admSupportStat.is-danger:hover {
+  border-color: rgba(255,100,120,.34);
+  background: rgba(255,80,100,.12);
+}
+
+.sellerRequestCard {
+  gap: 16px;
+}
+
+.sellerRequestCard__badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.sellerRequestCard__about {
+  padding: 14px 16px;
+}
+
+.admBannerPreview {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 24 / 5;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.12);
+  margin-top: 12px;
+}
+
+@media (max-width: 1100px) {
+  .admDashboardGrid,
+  .admOperationsGrid,
+  .admFocusGrid,
+  .admSupportStats,
+  .admUsersLayout,
+  .admClaimsLayout,
+  .admUserCard__open,
+  .admClaimCard__open {
+    grid-template-columns: 1fr;
+  }
+
+  .admUserPanel,
+  .admClaimPanel {
+    position: static;
+  }
+
+  .admAttachmentOverlay__top {
+    left: 12px;
+    right: 12px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admAttachmentOverlay__actions {
+    justify-content: stretch;
+  }
+
+  .admAttachmentOverlay__stage {
+    inset: 150px 12px 88px;
+    padding: 12px;
+  }
+
+  .admAttachmentOverlay__nav {
+    top: auto;
+    bottom: 18px;
+    width: calc(50% - 20px);
+    height: 52px;
+    transform: none;
+  }
+
+  .admAttachmentOverlay__nav--prev {
+    left: 12px;
+  }
+
+  .admAttachmentOverlay__nav--next {
+    right: 12px;
+  }
+}
+

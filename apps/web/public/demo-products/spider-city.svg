@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#10172f"/><stop offset=".55" stop-color="#781f2f"/><stop offset="1" stop-color="#f3483b"/></linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="900" cy="145" r="120" fill="#fff1d6" opacity=".82"/>
+  <path d="M0 610h1200v290H0z" fill="#111827"/>
+  <path d="M80 455h120v155H80zm170-85h145v240H250zm205 35h118v205H455zm165-120h150v325H620zm205 60h128v265H825zm180-105h130v370h-130z" fill="#1f2937"/>
+  <g fill="#f6d365" opacity=".75">
+    <rect x="110" y="492" width="22" height="22"/><rect x="158" y="492" width="22" height="22"/>
+    <rect x="287" y="420" width="24" height="24"/><rect x="342" y="420" width="24" height="24"/><rect x="287" y="485" width="24" height="24"/>
+    <rect x="660" y="336" width="26" height="26"/><rect x="718" y="336" width="26" height="26"/><rect x="660" y="410" width="26" height="26"/>
+    <rect x="1040" y="300" width="24" height="24"/><rect x="1090" y="300" width="24" height="24"/><rect x="1040" y="370" width="24" height="24"/>
+  </g>
+  <path d="M290 225c130 165 286 202 487 68" fill="none" stroke="#eef4ff" stroke-width="10" opacity=".7"/>
+  <path d="M745 304c-88 48-155 108-201 181l140 31 78-92 112 33c-33-70-78-120-129-153Z" fill="#e8eef9"/>
+  <path d="M684 516 606 685m78-169 78 169m-36-260 102 139m-191-90-118 88" stroke="#e8eef9" stroke-width="24" stroke-linecap="round"/>
+  <text x="86" y="130" fill="#fff" font-family="Arial, sans-serif" font-size="48" font-weight="800">SPIDER CITY</text>
+  <text x="86" y="188" fill="#ffd8d2" font-family="Arial, sans-serif" font-size="28">ключ активации</text>
+</svg>

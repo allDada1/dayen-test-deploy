@@ -1,0 +1,1852 @@
+.shoes-shell,
+body.shoes-product-shell {
+  --shoes-bg: #f4f1ec;
+  --shoes-surface: #ffffff;
+  --shoes-surface-warm: #e9e1d6;
+  --shoes-dark: #171717;
+  --shoes-text: #202020;
+  --shoes-muted: #5f5851;
+  --shoes-accent: #a85f3b;
+  --shoes-accent-dark: #6f3a25;
+  --shoes-sand: #c9b59a;
+  --shoes-border: #ddd3c7;
+  --shoes-shadow: 0 28px 80px rgba(54, 39, 29, 0.1);
+  background: var(--shoes-bg);
+  color: var(--shoes-text);
+}
+
+.shoesSellerLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  color: var(--shoes-text);
+  text-decoration: none;
+  background: linear-gradient(135deg, #fff, var(--shoes-surface-warm));
+  border: 1px solid var(--shoes-border);
+  border-radius: 20px;
+  box-shadow: 0 18px 44px rgba(111, 58, 37, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shoesSellerLink:hover {
+  transform: translateY(-2px);
+  border-color: rgba(168, 95, 59, 0.6);
+  box-shadow: 0 22px 54px rgba(111, 58, 37, 0.14);
+}
+
+.shoesSellerLink__avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 900;
+  background: var(--shoes-dark);
+  border-radius: 18px;
+}
+
+.shoesSellerLink__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shoesSellerLink span:last-child {
+  display: grid;
+  gap: 2px;
+}
+
+.shoesSellerLink small,
+.shoesSellerLink em {
+  color: var(--shoes-muted);
+  font-style: normal;
+  font-size: 13px;
+}
+
+.shoesSellerLink strong {
+  font-size: 16px;
+}
+
+.shoes-shell .topbar,
+body.shoes-product-shell .topbar {
+  background: rgba(244, 241, 236, 0.9);
+  border-bottom: 0;
+  backdrop-filter: blur(20px);
+}
+
+.shoes-shell .topbar__inner,
+body.shoes-product-shell .topbar__inner {
+  min-height: var(--site-header-height);
+}
+
+.shoes-shell .brand,
+.shoes-shell .topNav__a,
+.shoes-shell .iconBtn,
+.shoes-shell .headerProfile__trigger,
+body.shoes-product-shell .brand,
+body.shoes-product-shell .topNav__a,
+body.shoes-product-shell .iconBtn,
+body.shoes-product-shell .headerProfile__trigger {
+  color: var(--shoes-text);
+}
+
+.shoes-shell .brand__dot,
+.shoes-shell .subbar,
+.shoes-shell .siteFooter,
+body.shoes-product-shell .brand__dot,
+body.shoes-product-shell .subbar,
+body.shoes-product-shell .siteFooter {
+  display: none;
+}
+
+.shoes-shell .brand__name,
+body.shoes-product-shell .brand__name {
+  font-size: 30px;
+  letter-spacing: -0.035em;
+}
+
+.shoes-shell .topSearch input,
+body.shoes-product-shell .topSearch input {
+  min-height: var(--site-search-height);
+  padding-top: 0;
+  padding-bottom: 0;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(221, 211, 199, 0.9);
+  color: var(--shoes-text);
+  box-shadow: 0 18px 50px rgba(54, 39, 29, 0.05);
+}
+
+.shoes-shell .topSearch input::placeholder,
+body.shoes-product-shell .topSearch input::placeholder {
+  color: rgba(119, 113, 106, 0.72);
+}
+
+.shoes-shell .topNav__a,
+.shoes-shell .iconBtn,
+.shoes-shell .headerProfile__trigger,
+body.shoes-product-shell .topNav__a,
+body.shoes-product-shell .iconBtn,
+body.shoes-product-shell .headerProfile__trigger {
+  min-height: var(--site-action-height);
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 18px;
+  background: var(--shoes-dark);
+  border-color: var(--shoes-dark);
+  color: #fff;
+  box-shadow: 0 16px 34px rgba(23, 23, 23, 0.13);
+}
+
+.shoes-shell .topNav__a:hover,
+.shoes-shell .iconBtn:hover,
+.shoes-shell .headerProfile__trigger[aria-expanded="true"],
+body.shoes-product-shell .topNav__a:hover,
+body.shoes-product-shell .iconBtn:hover,
+body.shoes-product-shell .headerProfile__trigger[aria-expanded="true"] {
+  background: var(--shoes-accent-dark);
+  border-color: rgba(168, 95, 59, 0.48);
+  color: #fff;
+  box-shadow: 0 18px 38px rgba(111, 58, 37, 0.2);
+}
+
+.shoes-shell .badge,
+body.shoes-product-shell .badge {
+  border-color: var(--shoes-bg);
+  background: linear-gradient(135deg, #d59a70, #a85f3b);
+  color: #fff;
+}
+
+.shoes-shell > main,
+body.shoes-product-shell .legacy-shell > main {
+  background: var(--shoes-bg);
+}
+
+.shoesPage {
+  --shoes-bg: #f4f1ec;
+  --shoes-surface: #ffffff;
+  --shoes-surface-warm: #e9e1d6;
+  --shoes-dark: #171717;
+  --shoes-text: #202020;
+  --shoes-muted: #5f5851;
+  --shoes-accent: #a85f3b;
+  --shoes-accent-dark: #6f3a25;
+  --shoes-sand: #c9b59a;
+  --shoes-border: #ddd3c7;
+  --shoes-shadow: 0 28px 80px rgba(54, 39, 29, 0.1);
+  width: min(1700px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 36px 0 64px;
+  color: var(--shoes-text);
+  background: var(--shoes-bg);
+  font-family: "Manrope", "Space Grotesk", sans-serif;
+}
+
+.shoesHero,
+.shoesManagedBanner {
+  position: relative;
+  min-height: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(221, 211, 199, 0.8);
+  box-shadow: var(--shoes-shadow);
+}
+
+.shoesHero {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.46fr) 1fr;
+  background:
+    radial-gradient(circle at 72% 14%, rgba(201, 181, 154, 0.42), transparent 35%),
+    linear-gradient(135deg, #231f1b 0%, #3b3028 44%, #d7c6b2 100%);
+  color: #fff;
+}
+
+.shoesHero::after,
+.shoesManagedBanner::after,
+.shoesPromo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(23, 23, 23, 0.9) 0%, rgba(23, 23, 23, 0.62) 38%, rgba(23, 23, 23, 0.18) 100%),
+    linear-gradient(180deg, rgba(23, 23, 23, 0.16), rgba(23, 23, 23, 0.34)),
+    radial-gradient(circle at 72% 16%, rgba(255, 255, 255, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.shoesHero__copy,
+.shoesManagedBanner__copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 18px;
+  padding: 58px 64px;
+}
+
+.shoesHero__copy > span,
+.shoesManagedBanner__copy > span,
+.shoesPromo span {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff8ee;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.32);
+}
+
+.shoesHero h1,
+.shoesManagedBanner h2 {
+  max-width: 580px;
+  margin: 0;
+  font-size: clamp(44px, 4.4vw, 70px);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.34);
+}
+
+.shoesHero p,
+.shoesManagedBanner p,
+.shoesPromo p {
+  max-width: 440px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  line-height: 1.65;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+}
+
+.shoesHero small {
+  margin-top: 38px;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.shoesHero__visual,
+.shoesManagedBanner__visual {
+  position: absolute;
+  inset: 0;
+}
+
+.shoesManagedBanner {
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, #f4f1ec, #d9c6b6);
+}
+
+.shoesManagedBanner::after {
+  background:
+    linear-gradient(90deg, rgba(244, 241, 236, 0.96) 0%, rgba(244, 241, 236, 0.82) 34%, rgba(244, 241, 236, 0.18) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(111, 58, 37, 0.12));
+}
+
+.shoesManagedBanner__copy {
+  width: min(600px, 52%);
+  min-height: 100%;
+  color: var(--shoes-text);
+}
+
+.shoesManagedBanner__copy > span {
+  background: rgba(168, 95, 59, 0.12);
+  border-color: rgba(168, 95, 59, 0.18);
+  color: var(--shoes-accent-dark);
+}
+
+.shoesManagedBanner__copy p {
+  color: var(--shoes-muted);
+}
+
+.shoesManagedBanner__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shoesButton {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 26px;
+  border: 1px solid var(--shoes-dark);
+  border-radius: 14px;
+  background: var(--shoes-dark);
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 20px 42px rgba(23, 23, 23, 0.22);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shoesButton:hover {
+  transform: translateY(-2px);
+  background: var(--shoes-accent-dark);
+  box-shadow: 0 24px 52px rgba(111, 58, 37, 0.28);
+}
+
+.shoesButton--soft {
+  background: #efe8df;
+  border-color: #efe8df;
+  color: var(--shoes-text);
+  box-shadow: none;
+}
+
+.shoesBenefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 28px 0 42px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--shoes-border);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 20px 60px rgba(54, 39, 29, 0.06);
+}
+
+.shoesBenefits div {
+  min-height: 96px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: center;
+  column-gap: 14px;
+  padding: 22px 26px;
+  border-right: 1px solid var(--shoes-border);
+}
+
+.shoesBenefits div:last-child {
+  border-right: 0;
+}
+
+.shoesBenefits span {
+  grid-row: span 2;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #efe7de;
+  color: var(--shoes-accent-dark);
+  font-weight: 900;
+}
+
+.shoesBenefits strong,
+.shoesTrust strong {
+  font-size: 16px;
+}
+
+.shoesBenefits small,
+.shoesCategoryCard span,
+.shoesTrust span,
+.shoesNewsletter p {
+  color: var(--shoes-muted);
+}
+
+.shoesSection {
+  margin-top: 40px;
+}
+
+.shoesSectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.shoesSectionHead h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.shoesSectionHead button {
+  border: 0;
+  background: transparent;
+  color: var(--shoes-accent-dark);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.shoesCategoryGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.shoesCategoryCard,
+.shoesProductCard,
+.shoesCollectionCard {
+  border: 1px solid rgba(221, 211, 199, 0.86);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--shoes-text);
+  text-decoration: none;
+  box-shadow: 0 18px 50px rgba(54, 39, 29, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.shoesCategoryCard:hover,
+.shoesProductCard:hover,
+.shoesCollectionCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 95, 59, 0.34);
+  box-shadow: 0 28px 72px rgba(54, 39, 29, 0.11);
+}
+
+.shoesCategoryCard {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 18px;
+}
+
+.shoesCategoryCard__image {
+  height: 132px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #ece4da;
+}
+
+.shoesCategoryCard__image img,
+.shoesProductCard__media img,
+.shoesProductGallery__main img,
+.shoesProductThumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shoesCategoryCard strong,
+.shoesCategoryCard span {
+  padding-inline: 6px;
+}
+
+.shoesProductGrid {
+  display: grid;
+  gap: 22px;
+}
+
+.shoesProductGrid--six {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.shoesProductGrid--catalog {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.shoesProductGrid--catalog.is-list {
+  grid-template-columns: 1fr;
+}
+
+.shoesProductGrid--catalog.is-list .shoesProductCard {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+}
+
+.shoesProductGrid--catalog.is-list .shoesProductCard__media {
+  height: 220px;
+}
+
+.shoesProductGrid--catalog.is-list .shoesProductCard__body {
+  align-items: center;
+  min-height: 220px;
+  padding: 24px;
+}
+
+.shoesProductCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.shoesProductCard__media {
+  position: relative;
+  height: 255px;
+  display: block;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f8f5f0, #e5dacf);
+}
+
+.shoesProductCard__media img,
+.shoesProductCard__media .shoesScene {
+  transition: transform 0.28s ease;
+}
+
+.shoesProductCard:hover .shoesProductCard__media img,
+.shoesProductCard:hover .shoesProductCard__media .shoesScene {
+  transform: scale(1.035);
+}
+
+.shoesProductCard__body {
+  min-height: 116px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: end;
+  padding: 16px;
+}
+
+.shoesProductCard__text {
+  display: grid;
+  gap: 5px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.shoesProductCard__text strong {
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.shoesProductCard__text span {
+  color: var(--shoes-muted);
+  font-size: 13px;
+}
+
+.shoesProductCard__text b {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 19px;
+}
+
+.shoesProductCard__text small,
+.shoesProductPrice span {
+  color: #a79d94;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.shoesBadge {
+  position: absolute;
+  z-index: 3;
+  top: 14px;
+  left: 14px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: var(--shoes-accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.shoesFavorite,
+.shoesProductGallery__fav {
+  position: absolute;
+  z-index: 3;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(23, 23, 23, 0.12);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--shoes-text);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+}
+
+.shoesCartButton {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 14px;
+  background: var(--shoes-accent);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(168, 95, 59, 0.24);
+}
+
+.shoesCartButton svg {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+
+.shoesPromo {
+  position: relative;
+  min-height: 330px;
+  display: grid;
+  grid-template-columns: 0.42fr 1fr;
+  overflow: hidden;
+  margin-top: 48px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #2a211c, #5a3a2b 58%, #c7ad91);
+  box-shadow: var(--shoes-shadow);
+}
+
+.shoesPromo > div {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 16px;
+  padding: 50px;
+  color: #fff;
+}
+
+.shoesPromo h2 {
+  max-width: 410px;
+  margin: 0;
+  font-size: clamp(32px, 3vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+.shoesPromo > .shoesScene {
+  position: absolute;
+  inset: 0 0 0 35%;
+  z-index: 0;
+}
+
+.shoesCollectionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.shoesCollectionCard {
+  position: relative;
+  min-height: 230px;
+  display: grid;
+  align-content: end;
+  overflow: hidden;
+  padding: 22px;
+  border-radius: 20px;
+  color: #fff;
+  background: #2f2924;
+}
+
+.shoesCollectionCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 20%, rgba(23, 23, 23, 0.72));
+}
+
+.shoesCollectionCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+.shoesCollectionCard .shoesScene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.78;
+}
+
+.shoesCollectionCard strong {
+  font-size: 20px;
+}
+
+.shoesTrust {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.shoesTrust div {
+  display: grid;
+  gap: 8px;
+  padding: 24px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.shoesNewsletter {
+  display: grid;
+  grid-template-columns: 1fr minmax(360px, 0.7fr);
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 28px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.shoesNewsletter h2 {
+  margin: 0 0 8px;
+}
+
+.shoesNewsletter form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.shoesNewsletter input,
+.shoesInputs input {
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.shoesNewsletter button {
+  min-height: 48px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--shoes-dark);
+  color: #fff;
+  font-weight: 900;
+}
+
+.shoesCrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+  color: var(--shoes-muted);
+}
+
+.shoesCrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shoesCatalogLayout {
+  display: grid;
+  grid-template-columns: 0 minmax(0, 1fr);
+  gap: 28px;
+  transition: grid-template-columns 0.22s ease;
+}
+
+.shoesCatalogLayout.filters-open {
+  grid-template-columns: 280px minmax(0, 1fr);
+}
+
+.shoesSidebar {
+  position: sticky;
+  top: 96px;
+  max-height: calc(100vh - 116px);
+  overflow: hidden auto;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-12px);
+  padding: 28px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 70px rgba(54, 39, 29, 0.08);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.filters-open .shoesSidebar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.shoesFilterClose {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.shoesSidebar h1 {
+  margin: 0 0 8px;
+}
+
+.shoesSidebar p {
+  margin: 0 0 24px;
+  color: var(--shoes-muted);
+}
+
+.shoesFilterGroup {
+  display: grid;
+  gap: 14px;
+  padding: 22px 0;
+  border-top: 1px solid var(--shoes-border);
+}
+
+.shoesFilterGroup a {
+  color: var(--shoes-text);
+  text-decoration: none;
+}
+
+.shoesFilterGroup a.is-active {
+  color: var(--shoes-accent-dark);
+  font-weight: 900;
+}
+
+.shoesRange {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--shoes-accent), var(--shoes-sand));
+}
+
+.shoesInputs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.shoesInputs input {
+  min-width: 0;
+  width: 100%;
+}
+
+.shoesSizes,
+.shoesSwatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.shoesSizes button {
+  min-width: 44px;
+  height: 38px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--shoes-text);
+  cursor: pointer;
+}
+
+.shoesSwatches button {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(23, 23, 23, 0.12);
+  cursor: pointer;
+}
+
+.shoesCheck {
+  display: flex;
+  gap: 8px;
+  color: var(--shoes-muted);
+}
+
+.shoesSortBar {
+  position: sticky;
+  top: calc(var(--site-header-height) + 12px);
+  z-index: 6;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 14px 18px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 70px rgba(54, 39, 29, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.shoesFilterToggle,
+.shoesSortButtons button,
+.shoesViewSwitch button {
+  min-height: 44px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--shoes-text);
+  cursor: pointer;
+}
+
+.shoesFilterToggle {
+  width: 48px;
+  background: var(--shoes-dark);
+  color: #fff;
+  font-size: 20px;
+}
+
+.shoesSortButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.shoesSortButtons button {
+  padding: 0 18px;
+}
+
+.shoesSortButtons button.is-active,
+.shoesViewSwitch button.is-active {
+  border-color: var(--shoes-accent-dark);
+  background: var(--shoes-accent-dark);
+  color: #fff;
+}
+
+.shoesViewSwitch {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.shoesViewSwitch button {
+  width: 44px;
+  display: inline-grid;
+  place-items: center;
+}
+
+.shoesEmptyState {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  padding: 24px;
+  border: 1px dashed var(--shoes-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.56);
+  color: var(--shoes-muted);
+}
+
+.shoesProductLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(390px, 0.85fr);
+  gap: 54px;
+}
+
+.shoesProductGallery__main {
+  position: relative;
+  height: min(680px, 58vw);
+  overflow: hidden;
+  border: 1px solid var(--shoes-border);
+  border-radius: 24px;
+  background: linear-gradient(145deg, #fbf8f4, #e6dacc);
+  box-shadow: var(--shoes-shadow);
+}
+
+.shoesProductGallery__open {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.shoesProductThumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.shoesProductThumbs button {
+  height: 112px;
+  overflow: hidden;
+  border: 1px solid var(--shoes-border);
+  border-radius: 16px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.shoesProductThumbs button.is-active {
+  border-color: var(--shoes-accent);
+}
+
+.shoesProductInfo {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+
+.shoesProductInfo__badge {
+  width: max-content;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #efe7de;
+  color: var(--shoes-accent-dark);
+  font-weight: 900;
+}
+
+.shoesProductInfo h1 {
+  margin: 0;
+  font-size: clamp(34px, 3vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+
+.shoesProductInfo p {
+  max-width: 600px;
+  margin: 0;
+  color: var(--shoes-muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.shoesProductInfo__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: var(--shoes-muted);
+}
+
+.shoesProductPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.shoesProductPrice strong {
+  font-size: 34px;
+}
+
+.shoesSave {
+  width: max-content;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(168, 95, 59, 0.1);
+  color: var(--shoes-accent-dark);
+}
+
+.shoesOptionBlock {
+  display: grid;
+  gap: 12px;
+}
+
+.shoesInfoRows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.shoesInfoRows div {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.shoesInfoRows span {
+  color: var(--shoes-muted);
+  font-size: 13px;
+}
+
+.shoesStickyBuy {
+  display: grid;
+  gap: 14px;
+  margin-top: 10px;
+  padding: 24px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 24px 70px rgba(54, 39, 29, 0.09);
+}
+
+.shoesProductPrice--small strong {
+  font-size: 28px;
+}
+
+.shoesStickyBuy .shoesButton {
+  width: 100%;
+}
+
+.shoesFavoriteWide {
+  min-height: 50px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--shoes-muted);
+  cursor: pointer;
+}
+
+.shoesProductTabs {
+  margin-top: 42px;
+  overflow: hidden;
+  border: 1px solid var(--shoes-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 70px rgba(54, 39, 29, 0.06);
+}
+
+.shoesProductTabs__nav {
+  display: flex;
+  gap: 22px;
+  padding: 0 26px;
+  border-bottom: 1px solid var(--shoes-border);
+}
+
+.shoesProductTabs__nav button {
+  min-height: 70px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--shoes-muted);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.shoesProductTabs__nav button.is-active {
+  border-bottom-color: var(--shoes-accent);
+  color: var(--shoes-text);
+}
+
+.shoesProductTabs__body {
+  padding: 28px;
+  color: var(--shoes-muted);
+  line-height: 1.7;
+}
+
+.shoesSpecTable,
+.shoesDeliveryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.shoesSpecTable div,
+.shoesDeliveryGrid div,
+.shoesTabReviews article {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid var(--shoes-border);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.shoesSpecTable span,
+.shoesDeliveryGrid span,
+.shoesTabReviews span {
+  color: var(--shoes-muted);
+}
+
+.shoesScene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 140px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 62% 30%, rgba(255, 255, 255, 0.46), transparent 34%),
+    linear-gradient(145deg, #f8f5f0, #dfd2c4);
+}
+
+.shoesScene::before {
+  content: "";
+  position: absolute;
+  inset: 18% 11% auto auto;
+  width: 38%;
+  height: 44%;
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.16);
+  filter: blur(8px);
+}
+
+.shoesScene__shoe {
+  position: absolute;
+  left: 24%;
+  top: 42%;
+  width: 54%;
+  height: 22%;
+  border-radius: 46% 28% 18% 16%;
+  background: #181818;
+  box-shadow: inset -14px -10px 0 rgba(255, 255, 255, 0.06);
+  transform: rotate(-5deg);
+}
+
+.shoesScene__shoe--back {
+  left: 48%;
+  top: 30%;
+  width: 28%;
+  height: 28%;
+  border-radius: 40% 38% 16% 16%;
+  opacity: 0.92;
+}
+
+.shoesScene__lace {
+  position: absolute;
+  left: 47%;
+  top: 42%;
+  width: 16%;
+  height: 10%;
+  border-top: 3px solid rgba(255, 255, 255, 0.52);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+  transform: rotate(-7deg);
+}
+
+.shoesScene__sole {
+  position: absolute;
+  left: 22%;
+  top: 61%;
+  width: 58%;
+  height: 8%;
+  border-radius: 999px;
+  background: #f0eee7;
+  transform: rotate(-5deg);
+}
+
+.shoesScene__shadow {
+  position: absolute;
+  left: 24%;
+  top: 69%;
+  width: 58%;
+  height: 9%;
+  border-radius: 50%;
+  background: rgba(23, 23, 23, 0.18);
+  filter: blur(10px);
+}
+
+.shoesScene--hero {
+  background:
+    linear-gradient(90deg, rgba(23, 23, 23, 0.1), transparent 54%),
+    radial-gradient(circle at 70% 52%, rgba(255, 255, 255, 0.24), transparent 28%),
+    linear-gradient(145deg, #2b241f, #7a5a42 55%, #d0b99c);
+}
+
+.shoesScene--brown .shoesScene__shoe,
+.shoesScene--cognac .shoesScene__shoe,
+.shoesScene--hero .shoesScene__shoe {
+  background: linear-gradient(135deg, #4a281b, #9f6540);
+}
+
+.shoesScene--sand .shoesScene__shoe,
+.shoesScene--light .shoesScene__shoe {
+  background: linear-gradient(135deg, #efe6d8, #c8b397);
+}
+
+.shoesScene--graphite .shoesScene__shoe {
+  background: linear-gradient(135deg, #272727, #6a6965);
+}
+
+@media (max-width: 1200px) {
+  .shoesProductGrid--six,
+  .shoesCategoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shoesProductGrid--catalog,
+  .shoesCollectionGrid,
+  .shoesTrust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shoesProductLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .shoesProductGallery__main {
+    height: 560px;
+  }
+}
+
+@media (max-width: 760px) {
+  .shoesPage {
+    width: min(100% - 24px, 1700px);
+    padding-top: 16px;
+  }
+
+  .shoesHero,
+  .shoesManagedBanner {
+    height: auto;
+    min-height: 420px;
+    grid-template-columns: 1fr;
+  }
+
+  .shoesHero__copy,
+  .shoesManagedBanner__copy {
+    width: 100%;
+    min-height: 420px;
+    padding: 32px 24px;
+  }
+
+  .shoesHero h1,
+  .shoesManagedBanner h2 {
+    font-size: 42px;
+  }
+
+  .shoesBenefits,
+  .shoesCategoryGrid,
+  .shoesProductGrid--six,
+  .shoesProductGrid--catalog,
+  .shoesCollectionGrid,
+  .shoesTrust,
+  .shoesNewsletter,
+  .shoesSpecTable,
+  .shoesDeliveryGrid,
+  .shoesInfoRows {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shoesBenefits div {
+    border-right: 0;
+    border-bottom: 1px solid var(--shoes-border);
+  }
+
+  .shoesPromo {
+    grid-template-columns: 1fr;
+    min-height: 360px;
+  }
+
+  .shoesPromo > div {
+    padding: 30px 24px;
+  }
+
+  .shoesCatalogLayout,
+  .shoesCatalogLayout.filters-open {
+    grid-template-columns: 1fr;
+  }
+
+  .shoesSidebar {
+    position: fixed;
+    z-index: 20;
+    top: 88px;
+    left: 12px;
+    right: 12px;
+    max-height: calc(100vh - 106px);
+  }
+
+  .shoesSortBar {
+    position: static;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .shoesViewSwitch {
+    margin-left: 0;
+  }
+
+  .shoesProductGallery__main {
+    height: 420px;
+  }
+}
+
+@media (max-width: 520px) {
+  .shoesBenefits,
+  .shoesCategoryGrid,
+  .shoesProductGrid--six,
+  .shoesProductGrid--catalog,
+  .shoesCollectionGrid,
+  .shoesTrust,
+  .shoesNewsletter,
+  .shoesSpecTable,
+  .shoesDeliveryGrid,
+  .shoesInfoRows {
+    grid-template-columns: 1fr;
+  }
+
+  .shoesNewsletter form {
+    grid-template-columns: 1fr;
+  }
+
+  .shoesProductCard__media {
+    height: 220px;
+  }
+
+  .shoesProductThumbs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .shoesProductGrid--catalog.is-list .shoesProductCard,
+  .furnitureProductGrid--catalog.is-list .furnitureProductCard,
+  .beautyProductGrid--catalog.is-list .beautyProductCard {
+    grid-template-columns: 1fr;
+  }
+
+  .shoesProductGrid--catalog.is-list .shoesProductCard__body,
+  .furnitureProductGrid--catalog.is-list .furnitureProductCard__body,
+  .beautyProductGrid--catalog.is-list .beautyProductCard__body {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .shoesPage {
+    width: min(100% - 20px, 640px);
+    padding-top: 16px;
+    padding-bottom: 42px;
+  }
+
+  .shoesHero,
+  .shoesManagedBanner {
+    min-height: 390px;
+    border-radius: 22px;
+  }
+
+  .shoesHero::after {
+    background:
+      linear-gradient(180deg, rgba(23, 23, 23, 0.28) 0%, rgba(23, 23, 23, 0.72) 48%, rgba(23, 23, 23, 0.94) 100%),
+      linear-gradient(90deg, rgba(23, 23, 23, 0.48), rgba(23, 23, 23, 0.16));
+  }
+
+  .shoesManagedBanner::after {
+    background:
+      linear-gradient(180deg, rgba(244, 241, 236, 0.14) 0%, rgba(244, 241, 236, 0.76) 52%, rgba(244, 241, 236, 0.97) 100%),
+      linear-gradient(90deg, rgba(244, 241, 236, 0.22), rgba(244, 241, 236, 0.04));
+  }
+
+  .shoesHero__copy,
+  .shoesManagedBanner__copy {
+    min-height: 390px;
+    align-content: end;
+    gap: 13px;
+    padding: 24px 22px;
+  }
+
+  .shoesHero h1,
+  .shoesManagedBanner h2 {
+    max-width: 100%;
+    font-size: clamp(34px, 10vw, 44px);
+    line-height: 0.98;
+  }
+
+  .shoesHero p,
+  .shoesManagedBanner p,
+  .shoesPromo p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .shoesHero small {
+    margin-top: 6px;
+  }
+
+  .shoesButton {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .shoesBenefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 14px 0 30px;
+    border-radius: 18px;
+  }
+
+  .shoesBenefits div {
+    min-height: 106px;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px;
+    border-right: 1px solid var(--shoes-border);
+    border-bottom: 1px solid var(--shoes-border);
+  }
+
+  .shoesBenefits span {
+    width: 38px;
+    height: 38px;
+    grid-row: auto;
+  }
+
+  .shoesSection {
+    margin-top: 30px;
+  }
+
+  .shoesSectionHead {
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .shoesSectionHead h2 {
+    font-size: 24px;
+  }
+
+  .shoesSectionHead button {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .shoesCategoryGrid,
+  .shoesProductGrid--six,
+  .shoesProductGrid--catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .shoesCategoryCard {
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  .shoesCategoryCard__image {
+    height: 118px;
+    border-radius: 14px;
+  }
+
+  .shoesCategoryCard strong,
+  .shoesCategoryCard span {
+    padding-inline: 4px;
+  }
+
+  .shoesCategoryCard strong {
+    font-size: 14px;
+  }
+
+  .shoesCategoryCard span {
+    font-size: 12px;
+  }
+
+  .shoesProductCard {
+    border-radius: 18px;
+  }
+
+  .shoesProductCard__media {
+    height: 176px;
+  }
+
+  .shoesProductCard__media img {
+    object-fit: contain;
+    padding: 10px;
+    background: linear-gradient(180deg, #f8f5f0, #e5dacf);
+  }
+
+  .shoesProductCard__body {
+    min-height: 108px;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .shoesProductCard__text {
+    gap: 4px;
+  }
+
+  .shoesProductCard__text strong {
+    font-size: 14px;
+  }
+
+  .shoesProductCard__text span {
+    font-size: 12px;
+  }
+
+  .shoesProductCard__text b {
+    gap: 6px;
+    font-size: 16px;
+  }
+
+  .shoesCartButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .shoesBadge {
+    top: 10px;
+    left: 10px;
+    padding: 6px 9px;
+    font-size: 11px;
+  }
+
+  .shoesFavorite,
+  .shoesProductGallery__fav {
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .shoesPromo {
+    min-height: 340px;
+    border-radius: 22px;
+  }
+
+  .shoesPromo::after {
+    background:
+      linear-gradient(180deg, rgba(23, 23, 23, 0.1), rgba(23, 23, 23, 0.82)),
+      linear-gradient(90deg, rgba(23, 23, 23, 0.34), rgba(23, 23, 23, 0.05));
+  }
+
+  .shoesPromo > div {
+    align-content: end;
+    padding: 24px 22px;
+  }
+
+  .shoesPromo > .shoesScene {
+    inset: 0;
+  }
+
+  .shoesCollectionGrid,
+  .shoesTrust {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .shoesCollectionCard {
+    min-height: 180px;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .shoesCollectionCard strong {
+    font-size: 16px;
+  }
+
+  .shoesTrust div {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .shoesNewsletter {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .shoesNewsletter form {
+    grid-template-columns: 1fr;
+  }
+
+  .shoesCatalogLayout,
+  .shoesCatalogLayout.filters-open {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .shoesSidebar {
+    position: fixed;
+    z-index: 25;
+    top: 92px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-height: calc(100vh - 108px);
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .shoesCatalogLayout:not(.filters-open) .shoesSidebar {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-12px);
+  }
+
+  .shoesCatalogLayout.filters-open .shoesSidebar {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .shoesSortBar {
+    position: sticky;
+    top: 8px;
+    z-index: 12;
+    min-height: 0;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .shoesSortButtons {
+    gap: 8px;
+  }
+
+  .shoesFilterToggle,
+  .shoesSortButtons button,
+  .shoesViewSwitch button {
+    min-height: 40px;
+    border-radius: 12px;
+  }
+
+  .shoesSortButtons button {
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .shoesViewSwitch {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+
+  .shoesProductLayout {
+    gap: 28px;
+  }
+
+  .shoesProductGallery__main {
+    height: 420px;
+    border-radius: 20px;
+  }
+
+  .shoesProductThumbs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .shoesProductThumbs button {
+    height: 78px;
+    border-radius: 12px;
+  }
+
+  .shoesProductInfo {
+    gap: 14px;
+  }
+
+  .shoesProductInfo h1 {
+    font-size: clamp(31px, 9vw, 42px);
+  }
+
+  .shoesProductInfo p {
+    font-size: 15px;
+  }
+
+  .shoesInfoRows,
+  .shoesSpecTable,
+  .shoesDeliveryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shoesStickyBuy {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .shoesProductTabs {
+    margin-top: 30px;
+    border-radius: 18px;
+  }
+
+  .shoesProductTabs__nav {
+    gap: 18px;
+    overflow-x: auto;
+    padding: 0 16px;
+  }
+
+  .shoesProductTabs__nav button {
+    min-height: 58px;
+    flex: 0 0 auto;
+  }
+
+  .shoesProductTabs__body {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 460px) {
+  .shoesPage {
+    width: min(100% - 16px, 420px);
+  }
+
+  .shoesHero,
+  .shoesManagedBanner,
+  .shoesHero__copy,
+  .shoesManagedBanner__copy {
+    min-height: 360px;
+  }
+
+  .shoesHero__copy,
+  .shoesManagedBanner__copy,
+  .shoesPromo > div {
+    padding: 20px 16px;
+  }
+
+  .shoesBenefits,
+  .shoesCollectionGrid,
+  .shoesTrust,
+  .shoesInfoRows,
+  .shoesSpecTable,
+  .shoesDeliveryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .shoesCategoryGrid,
+  .shoesProductGrid--six,
+  .shoesProductGrid--catalog {
+    gap: 10px;
+  }
+
+  .shoesCategoryCard__image {
+    height: 104px;
+  }
+
+  .shoesProductCard__media {
+    height: 148px;
+  }
+
+  .shoesProductCard__body {
+    min-height: 100px;
+    padding: 10px;
+  }
+
+  .shoesProductCard__text strong {
+    font-size: 13px;
+  }
+
+  .shoesProductCard__text b {
+    font-size: 15px;
+  }
+
+  .shoesCartButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .shoesProductGallery__main {
+    height: 360px;
+  }
+
+  .shoesProductThumbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

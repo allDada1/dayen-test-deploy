@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "npm run dev:stop && start \"Dayen API\" cmd /k \"cd /d apps\\api && npm run dev\" && start \"Dayen Web\" cmd /k \"cd /d apps\\web && npm run dev\"",
+    "dev:stop": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\stop-dev.ps1",
+    "web:dev": "npm --prefix apps/web run dev",
+    "web:build": "npm --prefix apps/web run build",
+    "web:preview": "npm --prefix apps/web run preview",
+    "api:dev": "npm --prefix apps/api run dev",
+    "api:build": "npm --prefix apps/api run build",
+    "api:migrate": "npm --prefix apps/api run migrate",
+    "api:test": "npm --prefix apps/api test"
+  },
+  "dependencies": {
+    "@netlify/neon": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
