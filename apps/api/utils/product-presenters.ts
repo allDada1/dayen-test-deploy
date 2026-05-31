@@ -2,6 +2,10 @@ import type { Pool } from "pg";
 
 type ProductRow = Record<string, any>;
 type RatingsMapValue = { avg: number; cnt: number };
+type UserProductState = {
+  myLikeSet: Set<number>;
+  myRateMap: Map<number, number>;
+};
 
 function toProductList(input: ProductRow[] | ProductRow) {
   return Array.isArray(input) ? input : [input];
@@ -77,7 +81,7 @@ async function fetchRatingsMap(pool: Pool, ids: number[]) {
   );
 }
 
-async function fetchUserProductState(pool: Pool, userId: number | null, ids: number[]) {
+async function fetchUserProductState(pool: Pool, userId: number | null, ids: number[]): Promise<UserProductState> {
   if (!userId || !ids.length) {
     return {
       myLikeSet: new Set<number>(),
@@ -106,8 +110,8 @@ async function fetchUserProductState(pool: Pool, userId: number | null, ids: num
   ]);
 
   return {
-    myLikeSet: new Set((likesResult.rows || []).map((row) => Number(row.product_id))),
-    myRateMap: new Map((ratingsResult.rows || []).map((row) => [Number(row.product_id), Number(row.rating)])),
+    myLikeSet: new Set<number>((likesResult.rows || []).map((row) => Number(row.product_id))),
+    myRateMap: new Map<number, number>((ratingsResult.rows || []).map((row) => [Number(row.product_id), Number(row.rating)])),
   };
 }
 
