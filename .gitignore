@@ -12,6 +12,7 @@ apps/web/.env
 server/uploads/
 apps/api/dist/
 apps/web/dist/
+apps/web/.netlify/
 apps/web/*.tsbuildinfo
 apps/web/vite.config.js
 apps/web/vite.config.d.ts
