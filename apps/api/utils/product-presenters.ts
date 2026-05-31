@@ -30,7 +30,7 @@ function buildPlaceholders(ids: number[], startAt = 1) {
   return ids.map((_, i) => `$${i + startAt}`).join(",");
 }
 
-async function fetchLikesMap(pool: Pool, ids: number[]) {
+async function fetchLikesMap(pool: Pool, ids: number[]): Promise<Map<number, number>> {
   if (!ids.length) return new Map<number, number>();
 
   const placeholders = buildPlaceholders(ids);
@@ -42,10 +42,10 @@ async function fetchLikesMap(pool: Pool, ids: number[]) {
     ids,
   );
 
-  return new Map((result.rows || []).map((row) => [Number(row.product_id), Number(row.likes || 0)]));
+  return new Map<number, number>((result.rows || []).map((row) => [Number(row.product_id), Number(row.likes || 0)]));
 }
 
-async function fetchRatingsMap(pool: Pool, ids: number[]) {
+async function fetchRatingsMap(pool: Pool, ids: number[]): Promise<Map<number, RatingsMapValue>> {
   if (!ids.length) return new Map<number, RatingsMapValue>();
 
   const placeholdersRatings = buildPlaceholders(ids, 1);
@@ -70,7 +70,7 @@ async function fetchRatingsMap(pool: Pool, ids: number[]) {
     [...ids, ...ids],
   );
 
-  return new Map(
+  return new Map<number, RatingsMapValue>(
     (result.rows || []).map((row) => [
       Number(row.product_id),
       {
