@@ -145,11 +145,9 @@ export async function buildProductsWithStats(pool: Pool, rows: ProductRow[] | Pr
     return list.map(makeDefaultProductStats);
   }
 
-  const [likesMap, ratingsMap, userState] = await Promise.all([
-    fetchLikesMap(pool, ids),
-    fetchRatingsMap(pool, ids),
-    fetchUserProductState(pool, userId, ids),
-  ]);
+  const likesMap = await fetchLikesMap(pool, ids);
+  const ratingsMap = await fetchRatingsMap(pool, ids);
+  const userState = await fetchUserProductState(pool, userId, ids);
 
   return applyStatsToProducts(list, likesMap, ratingsMap, userState.myLikeSet, userState.myRateMap);
 }
