@@ -41,6 +41,7 @@ describe("upload utils", () => {
     const adminWithout2fa = makeUser({ is_admin: true, two_factor_enabled: false });
     const adminWith2fa = makeUser({ is_admin: true, two_factor_enabled: true });
     const ownerWith2fa = makeUser({ is_owner: true, two_factor_enabled: true });
+    const ownerWithout2fa = makeUser({ is_owner: true, two_factor_enabled: false });
 
     expect(canUserUploadToBucket(adminWithout2fa, UPLOAD_BUCKETS.products)).toBe(false);
     expect(canUserUploadToBucket(adminWithout2fa, UPLOAD_BUCKETS.tiles)).toBe(false);
@@ -53,5 +54,8 @@ describe("upload utils", () => {
     expect(canUserUploadToBucket(ownerWith2fa, UPLOAD_BUCKETS.products)).toBe(true);
     expect(canUserUploadToBucket(ownerWith2fa, UPLOAD_BUCKETS.tiles)).toBe(true);
     expect(canUserUploadToBucket(ownerWith2fa, UPLOAD_BUCKETS.misc)).toBe(true);
+    expect(canUserUploadToBucket(ownerWithout2fa, UPLOAD_BUCKETS.products)).toBe(true);
+    expect(canUserUploadToBucket(ownerWithout2fa, UPLOAD_BUCKETS.tiles)).toBe(true);
+    expect(canUserUploadToBucket(ownerWithout2fa, UPLOAD_BUCKETS.misc)).toBe(true);
   });
 });

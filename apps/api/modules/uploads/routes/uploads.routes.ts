@@ -28,13 +28,13 @@ export function canUserUploadToBucket(
   user: Pick<AppUser, "is_owner" | "is_admin" | "two_factor_enabled" | "is_seller" | "seller_access">,
   bucket: string,
 ) {
-  const privilegedWith2fa = (user.is_owner || user.is_admin) && user.two_factor_enabled;
+  const privilegedUploadAccess = user.is_owner || (user.is_admin && user.two_factor_enabled);
 
   if (bucket === UPLOAD_BUCKETS.support) return true;
   if (bucket === UPLOAD_BUCKETS.avatars) return true;
   if (bucket === UPLOAD_BUCKETS.sellerAvatars || bucket === UPLOAD_BUCKETS.sellerBanners) return true;
-  if (bucket === UPLOAD_BUCKETS.products) return privilegedWith2fa || user.seller_access || user.is_seller;
-  if (bucket === UPLOAD_BUCKETS.tiles || bucket === UPLOAD_BUCKETS.misc) return privilegedWith2fa;
+  if (bucket === UPLOAD_BUCKETS.products) return privilegedUploadAccess || user.seller_access || user.is_seller;
+  if (bucket === UPLOAD_BUCKETS.tiles || bucket === UPLOAD_BUCKETS.misc) return privilegedUploadAccess;
 
   return false;
 }

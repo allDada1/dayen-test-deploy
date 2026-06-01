@@ -45,7 +45,7 @@ function publicUrl(value: unknown): unknown {
 }
 
 function normalizeApiPayload<T>(payload: T, requestUrl: string): T {
-  if (!API_BASE_URL || requestUrl.includes("/api/uploads/image")) return payload;
+  if (!API_BASE_URL) return payload;
 
   if (Array.isArray(payload)) {
     return payload.map((item) => normalizeApiPayload(item, requestUrl)) as T;
