@@ -66,7 +66,7 @@ export function createAdminProductCreateRouter({
           imageUrl: coverImage,
           tileSlug,
           section,
-          ownerUserId: req.user?.id,
+          ownerUserId: null,
           specsJson,
         },
         images,

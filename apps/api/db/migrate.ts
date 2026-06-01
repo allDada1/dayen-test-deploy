@@ -300,6 +300,13 @@ export async function applySchemaUpdates() {
   }
   await pool.query(`UPDATE users SET seller_access = TRUE WHERE is_seller = TRUE AND seller_access = FALSE;`);
   await pool.query(`
+    UPDATE products p
+       SET owner_user_id = NULL
+      FROM users u
+     WHERE p.owner_user_id = u.id
+       AND COALESCE(u.is_seller, FALSE) = FALSE
+  `);
+  await pool.query(`
     INSERT INTO marketplace_sections (title, slug, emoji, sort_order, is_active)
     SELECT v.title, v.slug, v.emoji, v.sort_order, v.is_active
     FROM (

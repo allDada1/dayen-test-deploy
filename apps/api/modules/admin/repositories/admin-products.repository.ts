@@ -13,7 +13,7 @@ export type AdminProductInput = {
 };
 
 export type AdminProductCreateInput = AdminProductInput & {
-  ownerUserId: number | undefined;
+  ownerUserId: number | null;
 };
 
 export function createAdminProductsRepository(pool: Pool) {
