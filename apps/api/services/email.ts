@@ -26,7 +26,57 @@ type EmailVerificationPayload = {
   verifyUrl: string;
 };
 
+type EmailLayoutPayload = {
+  title: string;
+  preheader: string;
+  body: string;
+  buttonLabel: string;
+  url: string;
+};
+
 const EMAIL_SEND_TIMEOUT_MS = 8000;
+
+function buildEmailLayout({ title, preheader, body, buttonLabel, url }: EmailLayoutPayload) {
+  const safeUrl = escapeHtml(url);
+
+  return `
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">${escapeHtml(preheader)}</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0;padding:0;background:#f3f6fb;font-family:Arial,Helvetica,sans-serif;color:#172033;">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border:1px solid #e4e9f2;border-radius:18px;overflow:hidden;">
+            <tr>
+              <td style="padding:26px 28px 12px;background:#101828;">
+                <div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#9ec5ff;font-weight:700;">DAYEN</div>
+                <h1 style="margin:14px 0 0;font-size:26px;line-height:1.2;color:#ffffff;font-weight:800;">${escapeHtml(title)}</h1>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:26px 28px 10px;">
+                <p style="margin:0;font-size:16px;line-height:1.65;color:#344054;">${escapeHtml(body)}</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:14px 28px 24px;">
+                <a href="${safeUrl}" style="display:inline-block;padding:14px 20px;border-radius:12px;background:#2563eb;color:#ffffff;text-decoration:none;font-size:15px;font-weight:700;">${escapeHtml(buttonLabel)}</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 28px 28px;">
+                <p style="margin:0;font-size:13px;line-height:1.6;color:#667085;">Если кнопка не открывается, скопируйте ссылку вручную:</p>
+                <p style="margin:8px 0 0;font-size:13px;line-height:1.6;color:#2563eb;word-break:break-all;">${safeUrl}</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:18px 28px;background:#f8fafc;border-top:1px solid #eef2f7;">
+                <p style="margin:0;font-size:12px;line-height:1.5;color:#667085;">Если вы не запрашивали это письмо, просто проигнорируйте его.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>`;
+}
 
 export function createEmailService() {
   const apiKey = String(process.env.RESEND_API_KEY || "").trim();
@@ -74,8 +124,6 @@ export function createEmailService() {
   }
 
   async function sendPasswordResetEmail({ to, name, resetUrl }: PasswordResetPayload) {
-    const safeName = escapeHtml(name || "пользователь");
-    const safeUrl = escapeHtml(resetUrl);
     const displayName = name || "пользователь";
     const subject = "Сброс пароля - Dayen";
     const text = [
@@ -84,22 +132,17 @@ export function createEmailService() {
       "Вы запросили сброс пароля для аккаунта Dayen.",
       `Откройте ссылку, чтобы задать новый пароль: ${resetUrl}`,
       "",
-      "Если вы не запрашивали сброс, просто проигнорируйте это письмо.",
       "Ссылка действует ограниченное время.",
+      "Если вы не запрашивали сброс, просто проигнорируйте это письмо.",
     ].join("\n");
 
-    const html = `
-      <div style="margin:0;padding:24px;background:#0b1220;color:#eaf1ff;font-family:Arial,sans-serif;">
-        <div style="max-width:560px;margin:0 auto;padding:28px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:linear-gradient(180deg,#111827,#0f172a);">
-          <div style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#95b8ff;margin-bottom:12px;">DAYEN</div>
-          <h1 style="margin:0 0 12px;font-size:28px;line-height:1.15;">Сброс пароля</h1>
-          <p style="margin:0 0 14px;font-size:16px;line-height:1.6;color:#d7e2ff;">Здравствуйте, ${safeName}. Вы запросили сброс пароля для аккаунта Dayen.</p>
-          <p style="margin:0 0 22px;font-size:15px;line-height:1.6;color:#c8d6ff;">Нажмите на кнопку ниже, чтобы задать новый пароль. Ссылка действует ограниченное время.</p>
-          <a href="${safeUrl}" style="display:inline-block;padding:14px 18px;border-radius:14px;background:linear-gradient(135deg,#6fa7ff,#8d7dff);color:#fff;text-decoration:none;font-weight:700;">Сбросить пароль</a>
-          <p style="margin:22px 0 0;font-size:13px;line-height:1.6;color:#91a4d2;">Если кнопка не открывается, скопируйте ссылку вручную:<br><span style="word-break:break-all;color:#dce7ff;">${safeUrl}</span></p>
-          <p style="margin:18px 0 0;font-size:13px;line-height:1.6;color:#91a4d2;">Если вы не запрашивали сброс, просто проигнорируйте это письмо.</p>
-        </div>
-      </div>`;
+    const html = buildEmailLayout({
+      title: "Сброс пароля",
+      preheader: "Ссылка для сброса пароля Dayen.",
+      body: `Здравствуйте, ${displayName}. Нажмите кнопку ниже, чтобы задать новый пароль для аккаунта Dayen. Ссылка действует ограниченное время.`,
+      buttonLabel: "Сбросить пароль",
+      url: resetUrl,
+    });
 
     if (!apiKey || !from) {
       console.log("[auth:reset-email:dev]", { to, resetUrl, mode: "console_fallback" });
@@ -115,8 +158,6 @@ export function createEmailService() {
     name,
     verifyUrl,
   }: EmailVerificationPayload) {
-    const safeName = escapeHtml(name || "пользователь");
-    const safeUrl = escapeHtml(verifyUrl);
     const displayName = name || "пользователь";
     const subject = "Подтверждение почты - Dayen";
     const text = [
@@ -125,21 +166,17 @@ export function createEmailService() {
       "Подтвердите email для аккаунта Dayen.",
       `Откройте ссылку для подтверждения: ${verifyUrl}`,
       "",
+      "После подтверждения вы сможете оформлять заказы и подавать заявку продавца.",
       "Если вы не регистрировались, просто проигнорируйте это письмо.",
     ].join("\n");
 
-    const html = `
-      <div style="margin:0;padding:24px;background:#0b1220;color:#eaf1ff;font-family:Arial,sans-serif;">
-        <div style="max-width:560px;margin:0 auto;padding:28px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:linear-gradient(180deg,#111827,#0f172a);">
-          <div style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#95b8ff;margin-bottom:12px;">DAYEN</div>
-          <h1 style="margin:0 0 12px;font-size:28px;line-height:1.15;">Подтверждение email</h1>
-          <p style="margin:0 0 14px;font-size:16px;line-height:1.6;color:#d7e2ff;">Здравствуйте, ${safeName}. Чтобы активировать важные действия в аккаунте Dayen, подтвердите почту.</p>
-          <p style="margin:0 0 22px;font-size:15px;line-height:1.6;color:#c8d6ff;">Нажмите на кнопку ниже. После подтверждения вы сможете оформлять заказы и подавать заявку продавца.</p>
-          <a href="${safeUrl}" style="display:inline-block;padding:14px 18px;border-radius:14px;background:linear-gradient(135deg,#6fa7ff,#8d7dff);color:#fff;text-decoration:none;font-weight:700;">Подтвердить email</a>
-          <p style="margin:22px 0 0;font-size:13px;line-height:1.6;color:#91a4d2;">Если кнопка не открывается, скопируйте ссылку вручную:<br><span style="word-break:break-all;color:#dce7ff;">${safeUrl}</span></p>
-          <p style="margin:18px 0 0;font-size:13px;line-height:1.6;color:#91a4d2;">Если вы не регистрировались, просто проигнорируйте это письмо.</p>
-        </div>
-      </div>`;
+    const html = buildEmailLayout({
+      title: "Подтверждение почты",
+      preheader: "Подтвердите email для аккаунта Dayen.",
+      body: `Здравствуйте, ${displayName}. Нажмите кнопку ниже, чтобы подтвердить email для аккаунта Dayen. После подтверждения будут доступны заказы и заявка продавца.`,
+      buttonLabel: "Подтвердить email",
+      url: verifyUrl,
+    });
 
     if (!apiKey || !from) {
       console.log("[auth:verify-email:dev]", { to, verifyUrl, mode: "console_fallback" });
