@@ -14,6 +14,7 @@
     "setup": "npm run migrate && npm run backfill"
   },
   "dependencies": {
+    "cloudinary": "^2.10.0",
     "cors": "^2.8.5",
     "dotenv": "^17.3.1",
     "express": "^4.19.2",

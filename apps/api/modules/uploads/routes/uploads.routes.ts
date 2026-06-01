@@ -2,6 +2,7 @@
 
 import type { NextFunction, Response } from "express";
 import { uploadRateLimit } from "../../../middleware/rate-limit";
+import { isCloudinaryConfigured, uploadImageToCloudinary } from "../../../services/media-storage";
 import type { AppUser, AuthenticatedRequest } from "../../../types/app";
 import { badRequest, fail, ok } from "../../../utils/http";
 import {
@@ -69,6 +70,18 @@ export function createUploadsRouter({ authRequired, upload }: UploadsRouterOptio
       if (!(await validateUploadedImageFile(req.file))) {
         await removeUploadedFile(req.file);
         return badRequest(res, "bad_file_type");
+      }
+
+      if (isCloudinaryConfigured()) {
+        try {
+          const url = await uploadImageToCloudinary(req.file, bucket);
+          await removeUploadedFile(req.file);
+          return ok(res, { url });
+        } catch (error) {
+          await removeUploadedFile(req.file);
+          console.error("POST /api/uploads/image cloudinary error:", error);
+          return fail(res, 500, "upload_failed");
+        }
       }
 
       return ok(res, { url: buildUploadUrl(bucket, req.file.filename) });
