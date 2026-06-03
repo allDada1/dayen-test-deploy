@@ -246,21 +246,12 @@
     padding-bottom: 12px;
   }
 
+  .authTopbar__nav {
+    display: none;
+  }
+
   .authTopbar .brand__name {
     font-size: 24px;
-  }
-
-  .authTopbar__nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .authTopbar__nav .topNav__a {
-    min-height: 40px;
-    justify-content: center;
-    padding-inline: 12px;
-    font-size: 13px;
   }
 
   .authWrap {
