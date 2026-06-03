@@ -1,7 +1,6 @@
 [build]
-  base = "apps/web"
-  command = "npm run build"
-  publish = "dist"
+  command = "npm --prefix apps/web run build"
+  publish = "apps/web/dist"
 
 [build.environment]
   VITE_API_BASE_URL = "https://dayen-test-deploy.onrender.com"
