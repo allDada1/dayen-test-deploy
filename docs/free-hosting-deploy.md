@@ -47,7 +47,7 @@ OWNER_EMAIL=owner@example.com
 UPLOAD_DIR=/tmp/dayen-uploads
 
 RESEND_API_KEY=
-RESEND_FROM_EMAIL=
+RESEND_FROM_EMAIL=Dayen <noreply@dayen.store>
 GOOGLE_CLIENT_ID=
 OPENAI_API_KEY=
 OPENAI_MODEL=gpt-4o-mini
