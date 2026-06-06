@@ -23,7 +23,7 @@ export function TilePage() {
     let alive = true;
     setLoading(true);
 
-    const productsRequest = themedTileSlugs.has(slug) ? api.getProducts({ tile_slug: slug }) : api.getTileProducts(slug);
+    const productsRequest = themedTileSlugs.has(slug) ? api.getProducts({ section: slug }) : api.getTileProducts(slug);
     const bannerRequest =
       themedTileSlugs.has(slug)
         ? api.getPageBanner(category ? `${slug}:${category}` : slug).catch(() => ({ banner: null }))
