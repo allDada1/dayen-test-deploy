@@ -100,6 +100,10 @@ export function isShoesProduct(product: Product) {
 
 function shoesCategoryForProduct(product: Product) {
   const haystack = shoesHaystack(product);
+  const kidsCategory = shoesCategories.find((category) => category.slug === "kids");
+  if (kidsCategory?.keywords.some((keyword) => haystack.includes(keyword.toLowerCase()))) {
+    return kidsCategory;
+  }
   return shoesCategories.find((category) => category.keywords.some((keyword) => haystack.includes(keyword.toLowerCase()))) || null;
 }
 
