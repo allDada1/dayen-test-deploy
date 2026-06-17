@@ -4,6 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import { AdminNav } from "../components/AdminNav";
 import { useAuth } from "../../../providers/auth";
 import { api } from "../../../services/api";
+import { getErrorMessage } from "../../../services/errors";
 import { formatPrice } from "../../../services/format";
 import type { SellerClaim, SellerRequest } from "../../../types/api";
 
@@ -19,6 +20,12 @@ type DashboardState = {
   escalatedClaims: number;
   users: number;
   bannerActive: boolean;
+};
+
+type DashboardNotice = {
+  message: string;
+  actionLabel?: string;
+  actionTo?: string;
 };
 
 const emptyState: DashboardState = {
@@ -43,18 +50,24 @@ function isOpenClaim(claim: SellerClaim) {
   return ["open", "in_review", "escalated"].includes(String(claim.status || "").toLowerCase());
 }
 
+function getRejectedErrorCode(result: PromiseSettledResult<unknown>) {
+  if (result.status !== "rejected") return "";
+  const error = result.reason as { payload?: { error?: string; message?: string }; message?: string };
+  return error.payload?.error || error.payload?.message || error.message || "";
+}
+
 export function AdminDashboardPage() {
   const { loading, user } = useAuth();
   const [state, setState] = useState<DashboardState>(emptyState);
   const [isLoading, setIsLoading] = useState(false);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<DashboardNotice | null>(null);
 
   useEffect(() => {
     if (!user?.is_admin && !user?.is_owner) return;
 
     let active = true;
     setIsLoading(true);
-    setStatus("");
+    setStatus(null);
 
     async function loadDashboard() {
       const [productsResult, sectionsResult, tilesResult, requestsResult, claimsResult, supportResult, bannerResult, usersResult] =
@@ -80,7 +93,7 @@ export function AdminDashboardPage() {
       const banner = bannerResult.status === "fulfilled" ? bannerResult.value.banner : null;
       const users = usersResult.status === "fulfilled" ? usersResult.value.total : 0;
 
-      const failures = [
+      const results = [
         productsResult,
         sectionsResult,
         tilesResult,
@@ -89,7 +102,9 @@ export function AdminDashboardPage() {
         supportResult,
         bannerResult,
         usersResult,
-      ].filter((result) => result.status === "rejected").length;
+      ];
+      const failures = results.filter((result) => result.status === "rejected").length;
+      const failureCodes = results.map(getRejectedErrorCode).filter(Boolean);
 
       setState({
         products: products.length,
@@ -105,13 +120,36 @@ export function AdminDashboardPage() {
         bannerActive: Boolean(banner && banner.is_active !== 0),
       });
 
-      setStatus(failures ? `Часть данных не загрузилась: ${failures} блок(а). Остальные разделы доступны.` : "");
+      if (failureCodes.includes("two_factor_setup_required")) {
+        setStatus({
+          message: "Админ-сводка защищена: включите 2FA в настройках аккаунта, затем войдите заново. Остальные разделы доступны.",
+          actionLabel: "Открыть настройки",
+          actionTo: "/settings",
+        });
+      } else if (failureCodes.includes("no_token") || failureCodes.includes("bad_token") || failureCodes.includes("unauthorized")) {
+        setStatus({
+          message: "Сессия устарела. Войдите заново, чтобы загрузить админ-сводку.",
+          actionLabel: "Войти",
+          actionTo: "/auth",
+        });
+      } else {
+        setStatus(
+          failures
+            ? {
+                message: `Часть данных не загрузилась: ${failures} блок(а). ${getErrorMessage(
+                  results.find((result) => result.status === "rejected")?.reason,
+                  "Остальные разделы доступны.",
+                )}`,
+              }
+            : null,
+        );
+      }
       setIsLoading(false);
     }
 
     void loadDashboard().catch(() => {
       if (!active) return;
-      setStatus("Не удалось загрузить сводку. Разделы админки доступны ниже.");
+      setStatus({ message: "Не удалось загрузить сводку. Разделы админки доступны ниже." });
       setIsLoading(false);
     });
 
@@ -213,7 +251,12 @@ export function AdminDashboardPage() {
         <AdminNav />
       </header>
 
-      {status ? <div className="notice-banner">{status}</div> : null}
+      {status ? (
+        <div className="notice-banner">
+          <span>{status.message}</span>
+          {status.actionTo ? <Link to={status.actionTo}>{status.actionLabel || "Открыть"}</Link> : null}
+        </div>
+      ) : null}
 
       <section className="admDashboardGrid">
         <article className="contentCard admDashboardIntro">
